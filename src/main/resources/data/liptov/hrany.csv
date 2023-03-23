@@ -1,0 +1,1138 @@
+1;Banská Bystrica,,AS;2;Banská Bystrica,,Strieborné nám.;486;3
+2;Banská Bystrica,,Strieborné nám.;3;Banská Bystrica,Uľanka;432;7
+2;Banská Bystrica,,Strieborné nám.;446;Banská Bystrica,Jakub,Nový Svet II.;306;5
+2;Banská Bystrica,,Strieborné nám.;447;Banská Bystrica,,EUROPA SC;176;1
+3;Banská Bystrica,Uľanka;9;Staré Hory,,OcÚ;378;6
+3;Banská Bystrica,Uľanka;11;Staré Hory,,kaplnka;378;7
+3;Banská Bystrica,Uľanka;446;Banská Bystrica,Jakub,Nový Svet II.;148;2
+5;Donovaly,,Pod Magurou-ATC;6;Donovaly,,centrum;216;1
+5;Donovaly,,Pod Magurou-ATC;296;Lipt.Osada,Korytnica-kúpele,rázc.;198;4
+5;Donovaly,,Pod Magurou-ATC;321;Lipt.Osada,,Barboriná horáreň;162;3
+6;Donovaly,,centrum;5;Donovaly,,Pod Magurou-ATC;135;1
+6;Donovaly,,centrum;7;Motyčky;297;5
+6;Donovaly,,centrum;296;Lipt.Osada,Korytnica-kúpele,rázc.;216;5
+7;Motyčky;6;Donovaly,,centrum;392;5
+7;Motyčky;10;Staré Hory,Dolný Jelenec;108;3
+7;Motyčky;11;Staré Hory,,kaplnka;324;6
+9;Staré Hory,,OcÚ;11;Staré Hory,,kaplnka;54;1
+10;Staré Hory,Dolný Jelenec;7;Motyčky;108;3
+10;Staré Hory,Dolný Jelenec;11;Staré Hory,,kaplnka;270;3
+11;Staré Hory,,kaplnka;3;Banská Bystrica,Uľanka;364;7
+11;Staré Hory,,kaplnka;7;Motyčky;378;6
+11;Staré Hory,,kaplnka;10;Staré Hory,Dolný Jelenec;216;3
+12;Beňadiková,,PD;13;Beňadiková,,kult.dom;71;0,2
+12;Beňadiková,,PD;14;Beňadiková,,rázc.;66;1
+12;Beňadiková,,PD;145;Lipt.Mikuláš,Okoličné,ZŠ;243;3
+13;Beňadiková,,kult.dom;12;Beňadiková,,PD;76;0,2
+13;Beňadiková,,kult.dom;159;Lipt.Ondrej,,betonárka;135;2
+13;Beňadiková,,kult.dom;160;Lipt.Ondrej,,rázc.;255;3
+14;Beňadiková,,rázc.;12;Beňadiková,,PD;89;1
+14;Beňadiková,,rázc.;126;Uhorská Ves,,rázc.;82;1
+14;Beňadiková,,rázc.;144;Lipt.Mikuláš,Stošice,rázc.;72;1
+14;Beňadiková,,rázc.;145;Lipt.Mikuláš,Okoličné,ZŠ;153;2
+14;Beňadiková,,rázc.;187;Podtureň,,žel.zast.;162;2
+15;Lipt.Beharovce,,Beníky rázc.;20;Bobrovček,,OcÚ;85;1
+15;Lipt.Beharovce,,Beníky rázc.;97;Lipt.Beharovce,,Beníkovský;216;2
+15;Lipt.Beharovce,,Beníky rázc.;183;Pavlova Ves,,kult.dom;139;1
+16;Bešeňová,,Jednota;17;Bešeňová,,hotel Sumit;126;0,2
+16;Bešeňová,,Jednota;94;Potok,,OcÚ;162;2
+16;Bešeňová,,Jednota;465;Bešeňová,,bytovka 109;54;0,2
+17;Bešeňová,,hotel Sumit;16;Bešeňová,,Jednota;108;0,2
+17;Bešeňová,,hotel Sumit;94;Potok,,OcÚ;162;2
+17;Bešeňová,,hotel Sumit;128;Lipt.Michal,,Jednota;108;1
+17;Bešeňová,,hotel Sumit;369;Lipt.Teplá,,Prefa;54;1
+17;Bešeňová,,hotel Sumit;464;Bešeňová,,Sihoť;66;0,2
+19;Ivachnová,,rázc.;130;Lipt.Michal,,rázc.;152;2
+19;Ivachnová,,rázc.;316;Lipt.Sliače,,rázc.;157;3
+19;Ivachnová,,rázc.;364;Lipt.Michal,,pod cintorínom;162;3
+19;Ivachnová,,rázc.;445;Lisková,,križ.;162;4
+20;Bobrovček,,OcÚ;15;Lipt.Beharovce,,Beníky rázc.;81;1
+21;Bobrovec,,Huraj;22;Bobrovec,,OcÚ;71;1
+21;Bobrovec,,Huraj;24;Bobrovec,,Škorupovo;108;2
+21;Bobrovec,,Huraj;26;Bobrovec,,pošta;62;1
+21;Bobrovec,,Huraj;27;Bobrovec,,rázc.;54;0,2
+22;Bobrovec,,OcÚ;21;Bobrovec,,Huraj;75;1
+22;Bobrovec,,OcÚ;23;Bobrovec,,Rakovica;54;0,2
+22;Bobrovec,,OcÚ;24;Bobrovec,,Škorupovo;216;3
+22;Bobrovec,,OcÚ;25;Bobrovec,,ZŠ;75;0,2
+22;Bobrovec,,OcÚ;27;Bobrovec,,rázc.;54;1
+22;Bobrovec,,OcÚ;71;Jalovec,,ZŠ;324;2
+23;Bobrovec,,Rakovica;22;Bobrovec,,OcÚ;94;0,2
+23;Bobrovec,,Rakovica;25;Bobrovec,,ZŠ;122;0,2
+23;Bobrovec,,Rakovica;211;Trstené,,otoč.;135;1
+23;Bobrovec,,Rakovica;383;Bobrovec,,Luhy;54;0,2
+24;Bobrovec,,Škorupovo;21;Bobrovec,,Huraj;119;2
+24;Bobrovec,,Škorupovo;27;Bobrovec,,rázc.;162;4
+24;Bobrovec,,Škorupovo;394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;62;1
+24;Bobrovec,,Škorupovo;408;Lipt.Mikuláš,Lipt.Ondrašová,otoč.;54;0,2
+25;Bobrovec,,ZŠ;22;Bobrovec,,OcÚ;77;0,2
+25;Bobrovec,,ZŠ;26;Bobrovec,,pošta;54;0,2
+25;Bobrovec,,ZŠ;211;Trstené,,otoč.;76;1
+26;Bobrovec,,pošta;23;Bobrovec,,Rakovica;54;0,2
+27;Bobrovec,,rázc.;21;Bobrovec,,Huraj;54;0,2
+27;Bobrovec,,rázc.;22;Bobrovec,,OcÚ;81;1
+27;Bobrovec,,rázc.;24;Bobrovec,,Škorupovo;108;2
+27;Bobrovec,,rázc.;183;Pavlova Ves,,kult.dom;201;3
+29;Bobrovník,Hliník,rázc.;32;Bobrovník,,rázc.;63;1
+29;Bobrovník,Hliník,rázc.;198;Prosiek,,otoč.;351;5
+29;Bobrovník,Hliník,rázc.;199;Prosiek,,rázc.;122;2
+30;Bobrovník,,Jednota otoč.;31;Bobrovník,,ŠM bytovky;119;2
+30;Bobrovník,,Jednota otoč.;32;Bobrovník,,rázc.;135;1
+31;Bobrovník,,ŠM bytovky;30;Bobrovník,,Jednota otoč.;189;2
+31;Bobrovník,,ŠM bytovky;32;Bobrovník,,rázc.;68;1
+31;Bobrovník,,ŠM bytovky;33;Bukovina,,kult.dom;63;1
+32;Bobrovník,,rázc.;29;Bobrovník,Hliník,rázc.;63;1
+32;Bobrovník,,rázc.;30;Bobrovník,,Jednota otoč.;119;1
+32;Bobrovník,,rázc.;31;Bobrovník,,ŠM bytovky;54;1
+33;Bukovina,,kult.dom;31;Bobrovník,,ŠM bytovky;81;1
+33;Bukovina,,kult.dom;34;Bukovina,,polesie;65;1
+33;Bukovina,,kult.dom;83;Lipt.Anna,,garáž SAD;162;2
+34;Bukovina,,polesie;33;Bukovina,,kult.dom;90;1
+34;Bukovina,,polesie;82;Lipt.Anna,,Jednota;76;0,2
+35;Demänovská Dolina,,Jaskyňa Slobody;37;Demänovská Dolina,,Ľadová jaskyňa;158;3
+35;Demänovská Dolina,,Jaskyňa Slobody;38;Demänovská Dolina,,Lúčky;166;2
+36;Demänovská Dolina,,Jasná;40;Demänovská Dolina,,Záhradky;212;2
+37;Demänovská Dolina,,Ľadová jaskyňa;35;Demänovská Dolina,,Jaskyňa Slobody;141;3
+37;Demänovská Dolina,,Ľadová jaskyňa;39;Demänovská Dolina,,Chaty;104;1
+37;Demänovská Dolina,,Ľadová jaskyňa;41;Demänovská Dolina,,autocamp.;108;1
+38;Demänovská Dolina,,Lúčky;35;Demänovská Dolina,,Jaskyňa Slobody;162;2
+38;Demänovská Dolina,,Lúčky;44;Demänovská Dolina,,Staré koliesko;75;0,2
+39;Demänovská Dolina,,Chaty;41;Demänovská Dolina,,autocamp.;94;0,2
+39;Demänovská Dolina,,Chaty;454;Demänovská Dolina,,Wellness hotel Chopok;58;1
+40;Demänovská Dolina,,Záhradky;36;Demänovská Dolina,,Jasná;287;2
+40;Demänovská Dolina,,Záhradky;44;Demänovská Dolina,,Staré koliesko;58;1
+41;Demänovská Dolina,,autocamp.;39;Demänovská Dolina,,Chaty;83;0,2
+41;Demänovská Dolina,,autocamp.;184;Pavčina Lehota,,Hate;54;0,2
+41;Demänovská Dolina,,autocamp.;185;Pavčina Lehota,,garáž;194;1
+41;Demänovská Dolina,,autocamp.;252;Demänovská Dolina,,centr.park.;58;1
+42;Dúbrava,,Dom služ.;43;Dúbrava,,RaJ Baník;78;0,2
+42;Dúbrava,,Dom služ.;247;Ľubeľa,,Jednota;108;2
+42;Dúbrava,,Dom služ.;248;Ľubeľa,,lekáreň;101;2
+42;Dúbrava,,Dom služ.;249;Ľubeľa,,ZŠ;270;2
+43;Dúbrava,,RaJ Baník;42;Dúbrava,,Dom služ.;83;0,2
+43;Dúbrava,,RaJ Baník;45;Dúbrava,,závod;69;0,2
+44;Demänovská Dolina,,Staré koliesko;38;Demänovská Dolina,,Lúčky;62;0,2
+44;Demänovská Dolina,,Staré koliesko;40;Demänovská Dolina,,Záhradky;71;1
+45;Dúbrava,,závod;43;Dúbrava,,RaJ Baník;76;0,2
+45;Dúbrava,,závod;137;Dúbrava,,otoč.ŠM;65;1
+46;Galovany,,č.d.1;47;Galovany,,č.d.51;54;0,2
+47;Galovany,,č.d.51;46;Galovany,,č.d.1;59;0,2
+47;Galovany,,č.d.51;48;Galovany,,rázc.;72;1
+47;Galovany,,č.d.51;205;Svätý Kríž,,Cínovisko;155;2
+48;Galovany,,rázc.;47;Galovany,,č.d.51;84;1
+48;Galovany,,rázc.;131;Lipt.Mikuláš,Andice,rázc.;86;2
+48;Galovany,,rázc.;132;Lipt.Mikuláš,Andice,Háčik;108;2
+48;Galovany,,rázc.;147;Lipt.Mikuláš,Palúdzka,LAS;270;5
+48;Galovany,,rázc.;205;Svätý Kríž,,Cínovisko;108;1
+48;Galovany,,rázc.;209;Svätý Kríž,,rázc.;103;1
+49;Gôtovany,,Benický;50;Gôtovany,,OcÚ;108;1
+49;Gôtovany,,Benický;53;Gôtovany,,Vyšné rázc.;81;0,2
+50;Gôtovany,,OcÚ;49;Gôtovany,,Benický;108;1
+50;Gôtovany,,OcÚ;51;Gôtovany,,Piatko;86;0,2
+50;Gôtovany,,OcÚ;53;Gôtovany,,Vyšné rázc.;65;1
+51;Gôtovany,,Piatko;50;Gôtovany,,OcÚ;100;0,2
+53;Gôtovany,,Vyšné rázc.;49;Gôtovany,,Benický;81;0,2
+53;Gôtovany,,Vyšné rázc.;50;Gôtovany,,OcÚ;72;1
+53;Gôtovany,,Vyšné rázc.;54;Gôtovany,,rázc.;76;0,2
+53;Gôtovany,,Vyšné rázc.;251;Ľubeľa,,rázc.;135;2
+54;Gôtovany,,rázc.;53;Gôtovany,,Vyšné rázc.;76;0,2
+54;Gôtovany,,rázc.;209;Svätý Kríž,,rázc.;123;3
+54;Gôtovany,,rázc.;251;Ľubeľa,,rázc.;127;2
+54;Gôtovany,,rázc.;253;Ľubeľa,,Sihotka;61;1
+55;Huty,,Javorinský potok;57;Huty,,Škumat stred;81;1
+55;Huty,,Javorinský potok;416;Kvačany,,SSC;729;7
+56;Huty,,Pod skleným vŕškom;57;Huty,,Škumat stred;108;1
+56;Huty,,Pod skleným vŕškom;58;Huty,,ZŠ;81;0,2
+57;Huty,,Škumat stred;55;Huty,,Javorinský potok;108;1
+57;Huty,,Škumat stred;56;Huty,,Pod skleným vŕškom;135;1
+58;Huty,,ZŠ;56;Huty,,Pod skleným vŕškom;108;0,2
+58;Huty,,ZŠ;432;Huty,,Dolinky;135;1
+59;Huty,,rázc.na Malé Borové;60;Huty,,rázc.na Veľké Borové;54;1
+59;Huty,,rázc.na Malé Borové;170;Malé Borové,Novoť;108;1
+59;Huty,,rázc.na Malé Borové;432;Huty,,Dolinky;108;1
+60;Huty,,rázc.na Veľké Borové;59;Huty,,rázc.na Malé Borové;54;1
+60;Huty,,rázc.na Veľké Borové;218;Veľké Borové,,Ráztoka;162;2
+61;Hybe,,Lehotský Adam;64;Hybe,,nám.;87;1
+62;Lipt.Teplá,Madočany,RENOP;90;Lipt.Teplá,,ŠL;116;2
+62;Lipt.Teplá,Madočany,RENOP;92;Lipt.Teplá,,rázc.;108;1
+62;Lipt.Teplá,Madočany,RENOP;273;Lúčky,,rázc.Kalameny;96;1
+63;Hybe,,motel;61;Hybe,,Lehotský Adam;117;2
+63;Hybe,,motel;66;Hybe,,rázc.;60;1
+63;Hybe,,motel;76;Kráľova Lehota,,Preglejka;135;2
+64;Hybe,,nám.;63;Hybe,,motel;116;3
+64;Hybe,,nám.;65;Hybe,,otoč.;70;1
+64;Hybe,,nám.;66;Hybe,,rázc.;216;4
+64;Hybe,,nám.;77;Kráľova Lehota,,žel.st.;270;5
+64;Hybe,,nám.;108;Lipt.Hrádok,,Jánoškov domov;270;6
+65;Hybe,,otoč.;64;Hybe,,nám.;139;1
+65;Hybe,,otoč.;228;Východná,,Benzinol;211;3
+66;Hybe,,rázc.;61;Hybe,,Lehotský Adam;162;3
+66;Hybe,,rázc.;63;Hybe,,motel;54;1
+66;Hybe,,rázc.;76;Kráľova Lehota,,Preglejka;108;1
+66;Hybe,,rázc.;77;Kráľova Lehota,,žel.st.;239;1
+66;Hybe,,rázc.;108;Lipt.Hrádok,,Jánoškov domov;135;2
+66;Hybe,,rázc.;113;Lipt.Hrádok,,Maša;81;1
+68;Ižipovce;29;Bobrovník,Hliník,rázc.;302;3
+68;Ižipovce;199;Prosiek,,rázc.;108;1
+68;Ižipovce;398;Prosiek,Zádiel;54;1
+69;Jakubovany,,Hrča;70;Jakubovany,,Kuchárik;66;0,2
+70;Jakubovany,,Kuchárik;69;Jakubovany,,Hrča;89;0,2
+70;Jakubovany,,Kuchárik;160;Lipt.Ondrej,,rázc.;81;1
+71;Jalovec,,ZŠ;72;Jalovec,,most;54;0,2
+71;Jalovec,,ZŠ;383;Bobrovec,,Luhy;126;2
+72;Jalovec,,most;71;Jalovec,,ZŠ;68;0,2
+72;Jalovec,,most;383;Bobrovec,,Luhy;79;2
+73;Jamník,,RD otoč.;69;Jakubovany,,Hrča;324;3
+73;Jamník,,RD otoč.;402;Jamník,,Jednota;216;1
+74;Kráľova Lehota,,Cestné stavby obal.;77;Kráľova Lehota,,žel.st.;108;2
+74;Kráľova Lehota,,Cestné stavby obal.;174;Kráľova Lehota,,Michalovo Gašparík;94;2
+74;Kráľova Lehota,,Cestné stavby obal.;384;Kráľova Lehota,,Preglejka št.cesta;81;1
+75;Kráľova Lehota,,Jednota;77;Kráľova Lehota,,žel.st.;180;1
+76;Kráľova Lehota,,Preglejka;77;Kráľova Lehota,,žel.st.;94;0,2
+76;Kráľova Lehota,,Preglejka;400;Hybe,,rázc.na Kráľovu Lehotu;54;1
+77;Kráľova Lehota,,žel.st.;74;Kráľova Lehota,,Cestné stavby obal.;108;2
+77;Kráľova Lehota,,žel.st.;75;Kráľova Lehota,,Jednota;72;1
+77;Kráľova Lehota,,žel.st.;76;Kráľova Lehota,,Preglejka;54;0,2
+77;Kráľova Lehota,,žel.st.;174;Kráľova Lehota,,Michalovo Gašparík;189;4
+77;Kráľova Lehota,,žel.st.;384;Kráľova Lehota,,Preglejka št.cesta;54;1
+77;Kráľova Lehota,,žel.st.;400;Hybe,,rázc.na Kráľovu Lehotu;83;1
+78;Kvačany,Dlhá Lúka;80;Kvačany,,ZŠ;54;0,2
+78;Kvačany,Dlhá Lúka;103;Lipt.Matiašovce,,rázc.;97;2
+78;Kvačany,Dlhá Lúka;427;Kvačany,,garáž SAD;108;1
+79;Kvačany,,RD;427;Kvačany,,garáž SAD;102;0,2
+80;Kvačany,,ZŠ;78;Kvačany,Dlhá Lúka;84;0,2
+80;Kvačany,,ZŠ;88;Lipt.Sielnica,,PS;216;4
+80;Kvačany,,ZŠ;427;Kvačany,,garáž SAD;74;1
+81;Lazisko,,Droppa;206;Svätý Kríž,,Vyšný koniec;103;1
+81;Lazisko,,Droppa;428;Lazisko,,garáž SAD;124;0,2
+82;Lipt.Anna,,Jednota;34;Bukovina,,polesie;65;0,2
+82;Lipt.Anna,,Jednota;83;Lipt.Anna,,garáž SAD;86;1
+83;Lipt.Anna,,garáž SAD;34;Bukovina,,polesie;270;1
+83;Lipt.Anna,,garáž SAD;82;Lipt.Anna,,Jednota;54;1
+84;Lipt.Kokava,,Oravec;86;Lipt.Kokava,,obch.dom;69;0,2
+84;Lipt.Kokava,,Oravec;105;Lipt.Hrádok,Dovalovo,Petráško;360;6
+85;Lipt.Kokava,,RD;87;Lipt.Kokava,,pož.zbroj.;108;0,2
+86;Lipt.Kokava,,obch.dom;84;Lipt.Kokava,,Oravec;83;0,2
+86;Lipt.Kokava,,obch.dom;87;Lipt.Kokava,,pož.zbroj.;112;1
+87;Lipt.Kokava,,pož.zbroj.;85;Lipt.Kokava,,RD;162;0,2
+87;Lipt.Kokava,,pož.zbroj.;86;Lipt.Kokava,,obch.dom;86;1
+88;Lipt.Sielnica,,PS;80;Kvačany,,ZŠ;297;4
+88;Lipt.Sielnica,,PS;89;Lipt.Sielnica,,rázc.;104;1
+88;Lipt.Sielnica,,PS;102;Lipt.Matiašovce,,pož.zbroj.;270;3
+88;Lipt.Sielnica,,PS;103;Lipt.Matiašovce,,rázc.;186;2
+89;Lipt.Sielnica,,rázc.;79;Kvačany,,RD;378;6
+89;Lipt.Sielnica,,rázc.;88;Lipt.Sielnica,,PS;118;1
+89;Lipt.Sielnica,,rázc.;161;Lipt.Trnovec,,Krivý kút;184;3
+89;Lipt.Sielnica,,rázc.;162;Lipt.Trnovec,,ZŠ;243;4
+89;Lipt.Sielnica,,rázc.;199;Prosiek,,rázc.;90;1
+89;Lipt.Sielnica,,rázc.;393;Lipt.Trnovec,,ATC;252;5
+89;Lipt.Sielnica,,rázc.;398;Prosiek,Zádiel;162;1
+90;Lipt.Teplá,,ŠL;17;Bešeňová,,hotel Sumit;162;2
+90;Lipt.Teplá,,ŠL;62;Lipt.Teplá,Madočany,RENOP;117;2
+90;Lipt.Teplá,,ŠL;91;Lipt.Teplá,,nám.;135;0,2
+90;Lipt.Teplá,,ŠL;93;Lipt.Teplá,,žel.st.;189;1
+90;Lipt.Teplá,,ŠL;318;Turík,,rázc.;108;2
+91;Lipt.Teplá,,nám.;90;Lipt.Teplá,,ŠL;97;0,2
+91;Lipt.Teplá,,nám.;93;Lipt.Teplá,,žel.st.;140;1
+92;Lipt.Teplá,,rázc.;62;Lipt.Teplá,Madočany,RENOP;94;1
+92;Lipt.Teplá,,rázc.;318;Turík,,rázc.;118;2
+93;Lipt.Teplá,,žel.st.;90;Lipt.Teplá,,ŠL;123;1
+93;Lipt.Teplá,,žel.st.;91;Lipt.Teplá,,nám.;171;1
+93;Lipt.Teplá,,žel.st.;369;Lipt.Teplá,,Prefa;88;0,2
+94;Potok,,OcÚ;16;Bešeňová,,Jednota;270;2
+94;Potok,,OcÚ;17;Bešeňová,,hotel Sumit;162;2
+94;Potok,,OcÚ;95;Potok,,u Žiaka 44;147;1
+94;Potok,,OcÚ;465;Bešeňová,,bytovka 109;162;2
+95;Potok,,u Žiaka 44;94;Potok,,OcÚ;85;1
+96;Lipt.Matiašovce,,SSC;101;Lipt.Matiašovce,Vyšné Matiašovce;86;1
+96;Lipt.Matiašovce,,SSC;416;Kvačany,,SSC;324;5
+97;Lipt.Beharovce,,Beníkovský;183;Pavlova Ves,,kult.dom;108;1
+98;Lipt.Kľačany,,garáž SAD;99;Lipt.Kľačany,,kostol;72;1
+99;Lipt.Kľačany,,kostol;98;Lipt.Kľačany,,garáž SAD;68;1
+99;Lipt.Kľačany,,kostol;100;Lipt.Kľačany,,samota;60;0,2
+100;Lipt.Kľačany,,samota;99;Lipt.Kľačany,,kostol;62;0,2
+100;Lipt.Kľačany,,samota;246;Ľubeľa,,Humenný;60;1
+101;Lipt.Matiašovce,Vyšné Matiašovce;96;Lipt.Matiašovce,,SSC;108;1
+101;Lipt.Matiašovce,Vyšné Matiašovce;102;Lipt.Matiašovce,,pož.zbroj.;116;1
+101;Lipt.Matiašovce,Vyšné Matiašovce;430;Lipt.Matiašovce,,kaplnka;63;1
+102;Lipt.Matiašovce,,pož.zbroj.;78;Kvačany,Dlhá Lúka;162;3
+102;Lipt.Matiašovce,,pož.zbroj.;101;Lipt.Matiašovce,Vyšné Matiašovce;88;1
+102;Lipt.Matiašovce,,pož.zbroj.;103;Lipt.Matiašovce,,rázc.;104;1
+102;Lipt.Matiašovce,,pož.zbroj.;430;Lipt.Matiašovce,,kaplnka;54;0,2
+103;Lipt.Matiašovce,,rázc.;78;Kvačany,Dlhá Lúka;100;2
+103;Lipt.Matiašovce,,rázc.;88;Lipt.Sielnica,,PS;196;2
+103;Lipt.Matiašovce,,rázc.;89;Lipt.Sielnica,,rázc.;270;3
+103;Lipt.Matiašovce,,rázc.;102;Lipt.Matiašovce,,pož.zbroj.;104;1
+104;Podtureň,Roveň;123;Lipt.Hrádok,,žel.st.;166;1
+104;Podtureň,Roveň;187;Podtureň,,žel.zast.;130;2
+105;Lipt.Hrádok,Dovalovo,Petráško;84;Lipt.Kokava,,Oravec;339;6
+105;Lipt.Hrádok,Dovalovo,Petráško;107;Lipt.Hrádok,Dovalovo,pomník;108;0,2
+106;Lipt.Hrádok,Dovalovo,č.d.433;107;Lipt.Hrádok,Dovalovo,pomník;64;0,2
+106;Lipt.Hrádok,Dovalovo,č.d.433;114;Lipt.Hrádok,,Pod skalou;108;2
+106;Lipt.Hrádok,Dovalovo,č.d.433;118;Lipt.Hrádok,,Repček;90;2
+107;Lipt.Hrádok,Dovalovo,pomník;87;Lipt.Kokava,,pož.zbroj.;648;7
+107;Lipt.Hrádok,Dovalovo,pomník;105;Lipt.Hrádok,Dovalovo,Petráško;54;0,2
+107;Lipt.Hrádok,Dovalovo,pomník;106;Lipt.Hrádok,Dovalovo,č.d.433;71;0,2
+107;Lipt.Hrádok,Dovalovo,pomník;114;Lipt.Hrádok,,Pod skalou;162;2
+107;Lipt.Hrádok,Dovalovo,pomník;120;Lipt.Hrádok,,ZŠ;270;3
+108;Lipt.Hrádok,,Jánoškov domov;77;Kráľova Lehota,,žel.st.;324;3
+108;Lipt.Hrádok,,Jánoškov domov;113;Lipt.Hrádok,,Maša;75;1
+108;Lipt.Hrádok,,Jánoškov domov;121;Lipt.Hrádok,,Tesla;324;3
+108;Lipt.Hrádok,,Jánoškov domov;122;Lipt.Hrádok,,cint.;106;2
+109;Lipt.Peter,,RD;110;Lipt.Peter,,Bytovky;140;1
+109;Lipt.Peter,,RD;168;Jamník,,Mokraď;81;1
+109;Lipt.Peter,,RD;213;Vavrišovo,,OcÚ;324;4
+110;Lipt.Peter,,Bytovky;109;Lipt.Peter,,RD;61;1
+110;Lipt.Peter,,Bytovky;114;Lipt.Hrádok,,Pod skalou;91;1
+110;Lipt.Peter,,Bytovky;119;Lipt.Hrádok,,Sokolovňa;108;2
+110;Lipt.Peter,,Bytovky;168;Jamník,,Mokraď;135;2
+110;Lipt.Peter,,Bytovky;213;Vavrišovo,,OcÚ;230;3
+110;Lipt.Peter,,Bytovky;402;Jamník,,Jednota;162;3
+111;Lipt.Peter,,pomník;110;Lipt.Peter,,Bytovky;94;0,2
+111;Lipt.Peter,,pomník;213;Vavrišovo,,OcÚ;270;3
+113;Lipt.Hrádok,,Maša;66;Hybe,,rázc.;97;1
+113;Lipt.Hrádok,,Maša;76;Kráľova Lehota,,Preglejka;108;2
+113;Lipt.Hrádok,,Maša;77;Kráľova Lehota,,žel.st.;228;2
+113;Lipt.Hrádok,,Maša;108;Lipt.Hrádok,,Jánoškov domov;94;1
+113;Lipt.Hrádok,,Maša;384;Kráľova Lehota,,Preglejka št.cesta;108;2
+114;Lipt.Hrádok,,Pod skalou;110;Lipt.Peter,,Bytovky;108;1
+114;Lipt.Hrádok,,Pod skalou;111;Lipt.Peter,,pomník;135;1
+114;Lipt.Hrádok,,Pod skalou;118;Lipt.Hrádok,,Repček;64;0,2
+114;Lipt.Hrádok,,Pod skalou;119;Lipt.Hrádok,,Sokolovňa;90;1
+114;Lipt.Hrádok,,Pod skalou;120;Lipt.Hrádok,,ZŠ;108;1
+114;Lipt.Hrádok,,Pod skalou;122;Lipt.Hrádok,,cint.;106;1
+114;Lipt.Hrádok,,Pod skalou;123;Lipt.Hrádok,,žel.st.;250;2
+115;Lipt.Porúbka,,Chomová;116;Lipt.Porúbka,,Kubek;90;1
+116;Lipt.Porúbka,,Kubek;115;Lipt.Porúbka,,Chomová;63;1
+116;Lipt.Porúbka,,Kubek;117;Lipt.Porúbka,,pri moste;117;0,2
+117;Lipt.Porúbka,,pri moste;116;Lipt.Porúbka,,Kubek;63;0,2
+117;Lipt.Porúbka,,pri moste;120;Lipt.Hrádok,,ZŠ;162;2
+117;Lipt.Porúbka,,pri moste;123;Lipt.Hrádok,,žel.st.;238;2
+118;Lipt.Hrádok,,Repček;106;Lipt.Hrádok,Dovalovo,č.d.433;89;2
+118;Lipt.Hrádok,,Repček;114;Lipt.Hrádok,,Pod skalou;61;0,2
+119;Lipt.Hrádok,,Sokolovňa;114;Lipt.Hrádok,,Pod skalou;76;1
+119;Lipt.Hrádok,,Sokolovňa;120;Lipt.Hrádok,,ZŠ;81;0,2
+119;Lipt.Hrádok,,Sokolovňa;122;Lipt.Hrádok,,cint.;108;1
+119;Lipt.Hrádok,,Sokolovňa;123;Lipt.Hrádok,,žel.st.;162;1
+120;Lipt.Hrádok,,ZŠ;117;Lipt.Porúbka,,pri moste;162;2
+120;Lipt.Hrádok,,ZŠ;119;Lipt.Hrádok,,Sokolovňa;105;0,2
+120;Lipt.Hrádok,,ZŠ;121;Lipt.Hrádok,,Tesla;108;1
+120;Lipt.Hrádok,,ZŠ;123;Lipt.Hrádok,,žel.st.;243;1
+121;Lipt.Hrádok,,Tesla;122;Lipt.Hrádok,,cint.;126;1
+121;Lipt.Hrádok,,Tesla;123;Lipt.Hrádok,,žel.st.;224;2
+121;Lipt.Hrádok,,Tesla;431;Lipt.Hrádok,,Alcatel;292;0,4
+122;Lipt.Hrádok,,cint.;61;Hybe,,Lehotský Adam;324;7
+122;Lipt.Hrádok,,cint.;108;Lipt.Hrádok,,Jánoškov domov;103;2
+122;Lipt.Hrádok,,cint.;114;Lipt.Hrádok,,Pod skalou;73;1
+122;Lipt.Hrádok,,cint.;117;Lipt.Porúbka,,pri moste;270;2
+122;Lipt.Hrádok,,cint.;121;Lipt.Hrádok,,Tesla;126;1
+122;Lipt.Hrádok,,cint.;123;Lipt.Hrádok,,žel.st.;153;1
+123;Lipt.Hrádok,,žel.st.;104;Podtureň,Roveň;104;1
+123;Lipt.Hrádok,,žel.st.;107;Lipt.Hrádok,Dovalovo,pomník;324;4
+123;Lipt.Hrádok,,žel.st.;108;Lipt.Hrádok,,Jánoškov domov;140;3
+123;Lipt.Hrádok,,žel.st.;114;Lipt.Hrádok,,Pod skalou;135;2
+123;Lipt.Hrádok,,žel.st.;117;Lipt.Porúbka,,pri moste;230;2
+123;Lipt.Hrádok,,žel.st.;120;Lipt.Hrádok,,ZŠ;148;1
+123;Lipt.Hrádok,,žel.st.;121;Lipt.Hrádok,,Tesla;201;2
+123;Lipt.Hrádok,,žel.st.;122;Lipt.Hrádok,,cint.;76;1
+123;Lipt.Hrádok,,žel.st.;126;Uhorská Ves,,rázc.;162;4
+123;Lipt.Hrádok,,žel.st.;138;Lipt.Hrádok,,SOUE;162;2
+123;Lipt.Hrádok,,žel.st.;187;Podtureň,,žel.zast.;195;3
+123;Lipt.Hrádok,,žel.st.;431;Lipt.Hrádok,,Alcatel;238;2
+124;Lipt.Ján,,Jednota;125;Lipt.Ján,,ZŠ;96;1
+124;Lipt.Ján,,Jednota;127;Lipt.Ján,,zot.Ďumbier;162;1
+124;Lipt.Ján,,Jednota;453;Lipt.Ján,,ul.Starojánska ZŠ;324;1
+125;Lipt.Ján,,ZŠ;124;Lipt.Ján,,Jednota;100;1
+125;Lipt.Ján,,ZŠ;212;Uhorská Ves,,centrum;120;1
+126;Uhorská Ves,,rázc.;12;Beňadiková,,PD;54;2
+126;Uhorská Ves,,rázc.;14;Beňadiková,,rázc.;64;1
+126;Uhorská Ves,,rázc.;123;Lipt.Hrádok,,žel.st.;216;4
+126;Uhorská Ves,,rázc.;144;Lipt.Mikuláš,Stošice,rázc.;135;2
+126;Uhorská Ves,,rázc.;145;Lipt.Mikuláš,Okoličné,ZŠ;209;3
+126;Uhorská Ves,,rázc.;186;Podtureň,,Jednota;270;1
+126;Uhorská Ves,,rázc.;187;Podtureň,,žel.zast.;94;1
+126;Uhorská Ves,,rázc.;212;Uhorská Ves,,centrum;72;1
+127;Lipt.Ján,,zot.Ďumbier;124;Lipt.Ján,,Jednota;204;1
+127;Lipt.Ján,,zot.Ďumbier;448;Lipt.Ján,,hotel Bystrá;72;1
+128;Lipt.Michal,,Jednota;17;Bešeňová,,hotel Sumit;135;1
+128;Lipt.Michal,,Jednota;129;Lipt.Michal,,otoč.;63;0,2
+128;Lipt.Michal,,Jednota;465;Bešeňová,,bytovka 109;54;1
+129;Lipt.Michal,,otoč.;128;Lipt.Michal,,Jednota;108;0,2
+129;Lipt.Michal,,otoč.;465;Bešeňová,,bytovka 109;108;1
+130;Lipt.Michal,,rázc.;19;Ivachnová,,rázc.;153;2
+130;Lipt.Michal,,rázc.;177;Partizánska Ľupča,,Kostôlok;177;3
+130;Lipt.Michal,,rázc.;182;Partizánska Ľupča,,rázc.pri stínaní;189;2
+131;Lipt.Mikuláš,Andice,rázc.;48;Galovany,,rázc.;94;2
+131;Lipt.Mikuláš,Andice,rázc.;134;Lipt.Mikuláš,Benice,rázc.;54;1
+131;Lipt.Mikuláš,Andice,rázc.;147;Lipt.Mikuláš,Palúdzka,LAS;131;3
+131;Lipt.Mikuláš,Andice,rázc.;149;Lipt.Mikuláš,Palúdzka,nem.;216;4
+132;Lipt.Mikuláš,Andice,Háčik;48;Galovany,,rázc.;94;2
+132;Lipt.Mikuláš,Andice,Háčik;131;Lipt.Mikuláš,Andice,rázc.;54;0,2
+132;Lipt.Mikuláš,Andice,Háčik;133;Lipt.Mikuláš,Benice,Gorecký;81;1
+133;Lipt.Mikuláš,Benice,Gorecký;132;Lipt.Mikuláš,Andice,Háčik;66;1
+133;Lipt.Mikuláš,Benice,Gorecký;147;Lipt.Mikuláš,Palúdzka,LAS;135;2
+134;Lipt.Mikuláš,Benice,rázc.;131;Lipt.Mikuláš,Andice,rázc.;54;1
+134;Lipt.Mikuláš,Benice,rázc.;147;Lipt.Mikuláš,Palúdzka,LAS;108;2
+135;Lipt.Mikuláš,,centrum;143;Lipt.Mikuláš,,lekáreň;115;1
+135;Lipt.Mikuláš,,centrum;145;Lipt.Mikuláš,Okoličné,ZŠ;216;3
+135;Lipt.Mikuláš,,centrum;152;Lipt.Mikuláš,,LIDL;162;2
+135;Lipt.Mikuláš,,centrum;436;Lipt.Mikuláš,,Močiare Voj.akad.;270;3
+135;Lipt.Mikuláš,,centrum;437;Lipt.Mikuláš,,ul.Štúrova MsÚ;162;1
+135;Lipt.Mikuláš,,centrum;455;Lipt.Mikuláš,,Rachmaninovo nám.;124;1
+136;Lipt.Mikuláš,Demänová,rázc.;41;Demänovská Dolina,,autocamp.;239;4
+136;Lipt.Mikuláš,Demänová,rázc.;143;Lipt.Mikuláš,,lekáreň;324;4
+136;Lipt.Mikuláš,Demänová,rázc.;148;Lipt.Mikuláš,Palúdzka,ZŠ;243;3
+136;Lipt.Mikuláš,Demänová,rázc.;252;Demänovská Dolina,,centr.park.;126;3
+136;Lipt.Mikuláš,Demänová,rázc.;436;Lipt.Mikuláš,,Močiare Voj.akad.;79;1
+137;Dúbrava,,otoč.ŠM;45;Dúbrava,,závod;68;1
+138;Lipt.Hrádok,,SOUE;123;Lipt.Hrádok,,žel.st.;486;2
+138;Lipt.Hrádok,,SOUE;431;Lipt.Hrádok,,Alcatel;108;0,2
+139;Lipt.Mikuláš,,Komenského ul.MŠ;401;Lipt.Mikuláš,,AS;130;1
+140;Veľké Borové,,Jednota;219;Veľké Borové,,Salaj;54;0,2
+140;Veľké Borové,,Jednota;220;Veľké Borové,,Škrlák;135;0,2
+141;Lipt.Mikuláš,,ul.Revolučná Lidl;409;Lipt.Mikuláš,Lipt.Ondrašová,most;66;1
+143;Lipt.Mikuláš,,lekáreň;401;Lipt.Mikuláš,,AS;131;1
+144;Lipt.Mikuláš,Stošice,rázc.;12;Beňadiková,,PD;270;2
+144;Lipt.Mikuláš,Stošice,rázc.;14;Beňadiková,,rázc.;68;1
+144;Lipt.Mikuláš,Stošice,rázc.;126;Uhorská Ves,,rázc.;108;2
+144;Lipt.Mikuláš,Stošice,rázc.;145;Lipt.Mikuláš,Okoličné,ZŠ;88;1
+145;Lipt.Mikuláš,Okoličné,ZŠ;14;Beňadiková,,rázc.;108;2
+145;Lipt.Mikuláš,Okoličné,ZŠ;126;Uhorská Ves,,rázc.;148;3
+145;Lipt.Mikuláš,Okoličné,ZŠ;144;Lipt.Mikuláš,Stošice,rázc.;68;1
+145;Lipt.Mikuláš,Okoličné,ZŠ;146;Lipt.Mikuláš,Okoličné,otoč.;54;0,2
+145;Lipt.Mikuláš,Okoličné,ZŠ;150;Lipt.Mikuláš,,Podbreziny;134;2
+145;Lipt.Mikuláš,Okoličné,ZŠ;154;Lipt.Mikuláš,,Lipt.mliekarne;64;0,2
+145;Lipt.Mikuláš,Okoličné,ZŠ;187;Podtureň,,žel.zast.;216;4
+145;Lipt.Mikuláš,Okoličné,ZŠ;238;Závažná Poruba,,Luhy;108;1
+145;Lipt.Mikuláš,Okoličné,ZŠ;415;Lipt.Mikuláš,,Podbreziny otoč.;216;2
+145;Lipt.Mikuláš,Okoličné,ZŠ;463;Lipt.Mikuláš,,St.NICOLAUS;120;1
+146;Lipt.Mikuláš,Okoličné,otoč.;145;Lipt.Mikuláš,Okoličné,ZŠ;86;0,2
+146;Lipt.Mikuláš,Okoličné,otoč.;238;Závažná Poruba,,Luhy;54;1
+147;Lipt.Mikuláš,Palúdzka,LAS;131;Lipt.Mikuláš,Andice,rázc.;133;3
+147;Lipt.Mikuláš,Palúdzka,LAS;133;Lipt.Mikuláš,Benice,Gorecký;142;2
+147;Lipt.Mikuláš,Palúdzka,LAS;134;Lipt.Mikuláš,Benice,rázc.;108;2
+147;Lipt.Mikuláš,Palúdzka,LAS;149;Lipt.Mikuláš,Palúdzka,nem.;88;1
+147;Lipt.Mikuláš,Palúdzka,LAS;410;Lipt.Mikuláš,Palúdzka,ul.Palugyayho;54;0,2
+148;Lipt.Mikuláš,Palúdzka,ZŠ;136;Lipt.Mikuláš,Demänová,rázc.;216;3
+148;Lipt.Mikuláš,Palúdzka,ZŠ;143;Lipt.Mikuláš,,lekáreň;137;1
+148;Lipt.Mikuláš,Palúdzka,ZŠ;436;Lipt.Mikuláš,,Močiare Voj.akad.;171;2
+149;Lipt.Mikuláš,Palúdzka,nem.;131;Lipt.Mikuláš,Andice,rázc.;162;4
+149;Lipt.Mikuláš,Palúdzka,nem.;133;Lipt.Mikuláš,Benice,Gorecký;162;3
+149;Lipt.Mikuláš,Palúdzka,nem.;143;Lipt.Mikuláš,,lekáreň;99;1
+149;Lipt.Mikuláš,Palúdzka,nem.;147;Lipt.Mikuláš,Palúdzka,LAS;80;1
+149;Lipt.Mikuláš,Palúdzka,nem.;410;Lipt.Mikuláš,Palúdzka,ul.Palugyayho;58;1
+150;Lipt.Mikuláš,,Podbreziny;145;Lipt.Mikuláš,Okoličné,ZŠ;118;2
+150;Lipt.Mikuláš,,Podbreziny;151;Lipt.Mikuláš,Vitálišovce;100;0,2
+150;Lipt.Mikuláš,,Podbreziny;222;Veterná Poruba,,č.d.5;277;3
+150;Lipt.Mikuláš,,Podbreziny;414;Lipt.Mikuláš,,Podbreziny Juh;54;0,2
+151;Lipt.Mikuláš,Vitálišovce;150;Lipt.Mikuláš,,Podbreziny;87;0,2
+151;Lipt.Mikuláš,Vitálišovce;461;Smrečany,,bytovky;162;3
+152;Lipt.Mikuláš,,LIDL;145;Lipt.Mikuláš,Okoličné,ZŠ;143;1
+152;Lipt.Mikuláš,,LIDL;154;Lipt.Mikuláš,,Lipt.mliekarne;80;1
+153;Lipt.Mikuláš,,hotel Jánošík;141;Lipt.Mikuláš,,ul.Revolučná Lidl;67;1
+153;Lipt.Mikuláš,,hotel Jánošík;409;Lipt.Mikuláš,Lipt.Ondrašová,most;99;2
+154;Lipt.Mikuláš,,Lipt.mliekarne;145;Lipt.Mikuláš,Okoličné,ZŠ;96;0,2
+154;Lipt.Mikuláš,,Lipt.mliekarne;463;Lipt.Mikuláš,,St.NICOLAUS;89;1
+155;Lipt.Mikuláš,,STOP SHOP;135;Lipt.Mikuláš,,centrum;97;1
+156;Konská,,ZŠ;157;Konská,,hájenka;81;1
+156;Konská,,ZŠ;160;Lipt.Ondrej,,rázc.;270;3
+157;Konská,,hájenka;156;Konská,,ZŠ;79;1
+157;Konská,,hájenka;158;Lipt.Ondrej,,Uličný;146;1
+158;Lipt.Ondrej,,Uličný;157;Konská,,hájenka;152;1
+158;Lipt.Ondrej,,Uličný;160;Lipt.Ondrej,,rázc.;97;1
+159;Lipt.Ondrej,,betonárka;13;Beňadiková,,kult.dom;135;2
+159;Lipt.Ondrej,,betonárka;160;Lipt.Ondrej,,rázc.;108;1
+160;Lipt.Ondrej,,rázc.;12;Beňadiková,,PD;270;3
+160;Lipt.Ondrej,,rázc.;13;Beňadiková,,kult.dom;252;3
+160;Lipt.Ondrej,,rázc.;69;Jakubovany,,Hrča;108;1
+160;Lipt.Ondrej,,rázc.;70;Jakubovany,,Kuchárik;64;1
+160;Lipt.Ondrej,,rázc.;73;Jamník,,RD otoč.;378;2
+160;Lipt.Ondrej,,rázc.;158;Lipt.Ondrej,,Uličný;59;1
+160;Lipt.Ondrej,,rázc.;159;Lipt.Ondrej,,betonárka;135;1
+161;Lipt.Trnovec,,Krivý kút;89;Lipt.Sielnica,,rázc.;187;3
+161;Lipt.Trnovec,,Krivý kút;162;Lipt.Trnovec,,ZŠ;97;1
+162;Lipt.Trnovec,,ZŠ;89;Lipt.Sielnica,,rázc.;216;4
+162;Lipt.Trnovec,,ZŠ;161;Lipt.Trnovec,,Krivý kút;76;1
+162;Lipt.Trnovec,,ZŠ;163;Lipt.Trnovec,,rázc.;76;1
+162;Lipt.Trnovec,,ZŠ;409;Lipt.Mikuláš,Lipt.Ondrašová,most;270;5
+163;Lipt.Trnovec,,rázc.;162;Lipt.Trnovec,,ZŠ;90;1
+163;Lipt.Trnovec,,rázc.;409;Lipt.Mikuláš,Lipt.Ondrašová,most;227;4
+163;Lipt.Trnovec,,rázc.;440;Lipt.Mikuláš,,Aqua Park;208;2
+164;Malatíny,,Nižné;165;Malatíny,,Stredné;108;1
+164;Malatíny,,Nižné;167;Malatíny,,rázc.;108;1
+164;Malatíny,,Nižné;182;Partizánska Ľupča,,rázc.pri stínaní;162;3
+165;Malatíny,,Stredné;164;Malatíny,,Nižné;108;1
+165;Malatíny,,Stredné;166;Malatíny,,Vyšné;108;1
+165;Malatíny,,Stredné;177;Partizánska Ľupča,,Kostôlok;162;2
+166;Malatíny,,Vyšné;165;Malatíny,,Stredné;54;1
+167;Malatíny,,rázc.;164;Malatíny,,Nižné;162;1
+167;Malatíny,,rázc.;166;Malatíny,,Vyšné;54;1
+167;Malatíny,,rázc.;177;Partizánska Ľupča,,Kostôlok;108;2
+167;Malatíny,,rázc.;182;Partizánska Ľupča,,rázc.pri stínaní;150;2
+167;Malatíny,,rázc.;251;Ľubeľa,,rázc.;126;2
+168;Jamník,,Mokraď;109;Lipt.Peter,,RD;54;1
+168;Jamník,,Mokraď;110;Lipt.Peter,,Bytovky;225;2
+168;Jamník,,Mokraď;213;Vavrišovo,,OcÚ;270;5
+168;Jamník,,Mokraď;402;Jamník,,Jednota;146;1
+169;Malé Borové;170;Malé Borové,Novoť;54;1
+170;Malé Borové,Novoť;59;Huty,,rázc.na Malé Borové;108;1
+170;Malé Borové,Novoť;169;Malé Borové;81;1
+171;Malužiná,,Liptov;172;Malužiná,,kult.dom;108;0,2
+171;Malužiná,,Liptov;173;Malužiná,,rázc.;63;1
+171;Malužiná,,Liptov;210;Malužiná,,Svidovo rázc.;85;0,2
+172;Malužiná,,kult.dom;171;Malužiná,,Liptov;54;0,2
+172;Malužiná,,kult.dom;175;Nižná Boca,,Červená Voda;108;3
+173;Malužiná,,rázc.;171;Malužiná,,Liptov;81;1
+173;Malužiná,,rázc.;172;Malužiná,,kult.dom;108;1
+173;Malužiná,,rázc.;175;Nižná Boca,,Červená Voda;108;2
+174;Kráľova Lehota,,Michalovo Gašparík;74;Kráľova Lehota,,Cestné stavby obal.;108;2
+174;Kráľova Lehota,,Michalovo Gašparík;171;Malužiná,,Liptov;162;2
+174;Kráľova Lehota,,Michalovo Gašparík;210;Malužiná,,Svidovo rázc.;108;2
+174;Kráľova Lehota,,Michalovo Gašparík;384;Kráľova Lehota,,Preglejka št.cesta;216;3
+175;Nižná Boca,,Červená Voda;173;Malužiná,,rázc.;117;2
+175;Nižná Boca,,Červená Voda;176;Nižná Boca,,Záhradník;85;1
+176;Nižná Boca,,Záhradník;173;Malužiná,,rázc.;162;3
+176;Nižná Boca,,Záhradník;175;Nižná Boca,,Červená Voda;81;1
+176;Nižná Boca,,Záhradník;203;Nižná Boca,,Stred.Boca Herich;90;2
+176;Nižná Boca,,Záhradník;235;Vyšná Boca,,ZŠ;162;4
+177;Partizánska Ľupča,,Kostôlok;130;Lipt.Michal,,rázc.;202;3
+177;Partizánska Ľupča,,Kostôlok;167;Malatíny,,rázc.;135;2
+177;Partizánska Ľupča,,Kostôlok;178;Partizánska Ľupča,,Smitek;162;1
+177;Partizánska Ľupča,,Kostôlok;180;Partizánska Ľupča,,kult.dom;54;1
+177;Partizánska Ľupča,,Kostôlok;182;Partizánska Ľupča,,rázc.pri stínaní;46;0,2
+178;Partizánska Ľupča,,Smitek;179;Partizánska Ľupča,,č.d.253;58;0,2
+178;Partizánska Ľupča,,Smitek;181;Partizánska Ľupča,,otoč.ŠM;126;1
+179;Partizánska Ľupča,,č.d.253;178;Partizánska Ľupča,,Smitek;54;0,2
+179;Partizánska Ľupča,,č.d.253;180;Partizánska Ľupča,,kult.dom;96;0,2
+180;Partizánska Ľupča,,kult.dom;177;Partizánska Ľupča,,Kostôlok;70;1
+180;Partizánska Ľupča,,kult.dom;179;Partizánska Ľupča,,č.d.253;54;0,2
+181;Partizánska Ľupča,,otoč.ŠM;178;Partizánska Ľupča,,Smitek;85;1
+182;Partizánska Ľupča,,rázc.pri stínaní;130;Lipt.Michal,,rázc.;162;2
+182;Partizánska Ľupča,,rázc.pri stínaní;164;Malatíny,,Nižné;198;3
+182;Partizánska Ľupča,,rázc.pri stínaní;167;Malatíny,,rázc.;135;2
+182;Partizánska Ľupča,,rázc.pri stínaní;177;Partizánska Ľupča,,Kostôlok;54;0,2
+183;Pavlova Ves,,kult.dom;15;Lipt.Beharovce,,Beníky rázc.;93;1
+183;Pavlova Ves,,kult.dom;21;Bobrovec,,Huraj;216;3
+183;Pavlova Ves,,kult.dom;27;Bobrovec,,rázc.;208;3
+183;Pavlova Ves,,kult.dom;97;Lipt.Beharovce,,Beníkovský;99;1
+184;Pavčina Lehota,,Hate;41;Demänovská Dolina,,autocamp.;58;0,2
+184;Pavčina Lehota,,Hate;185;Pavčina Lehota,,garáž;68;1
+185;Pavčina Lehota,,garáž;184;Pavčina Lehota,,Hate;58;1
+186;Podtureň,,Jednota;126;Uhorská Ves,,rázc.;162;1
+187;Podtureň,,žel.zast.;14;Beňadiková,,rázc.;108;2
+187;Podtureň,,žel.zast.;104;Podtureň,Roveň;114;2
+187;Podtureň,,žel.zast.;123;Lipt.Hrádok,,žel.st.;189;3
+187;Podtureň,,žel.zast.;126;Uhorská Ves,,rázc.;70;1
+187;Podtureň,,žel.zast.;145;Lipt.Mikuláš,Okoličné,ZŠ;234;4
+188;Pribylina,,Hrdovo;190;Pribylina,,Kokavský most;72;1
+188;Pribylina,,Hrdovo;191;Pribylina,,Potôčky;54;1
+188;Pribylina,,Hrdovo;403;Pribylina,,Rač.dol.ráz.h.Esperanto;216;4
+189;Pribylina,,Kamenná dol.;190;Pribylina,,Kokavský most;108;1
+189;Pribylina,,Kamenná dol.;377;Pribylina,,Zruby;54;1
+190;Pribylina,,Kokavský most;188;Pribylina,,Hrdovo;90;1
+190;Pribylina,,Kokavský most;189;Pribylina,,Kamenná dol.;108;1
+190;Pribylina,,Kokavský most;377;Pribylina,,Zruby;108;2
+191;Pribylina,,Potôčky;188;Pribylina,,Hrdovo;108;1
+191;Pribylina,,Potôčky;403;Pribylina,,Rač.dol.ráz.h.Esperanto;162;3
+192;Pribylina,,ZŠ;194;Pribylina,,pož.zbroj.;79;1
+192;Pribylina,,ZŠ;214;Vavrišovo,,pož.zbroj.;209;3
+193;Pribylina,,garáž SAD;194;Pribylina,,pož.zbroj.;135;1
+193;Pribylina,,garáž SAD;403;Pribylina,,Rač.dol.ráz.h.Esperanto;72;1
+194;Pribylina,,pož.zbroj.;192;Pribylina,,ZŠ;71;1
+194;Pribylina,,pož.zbroj.;193;Pribylina,,garáž SAD;122;1
+196;Prosiek,,č.d.26;68;Ižipovce;252;3
+196;Prosiek,,č.d.26;197;Prosiek,,garáž SAD;54;0,2
+196;Prosiek,,č.d.26;199;Prosiek,,rázc.;162;2
+197;Prosiek,,garáž SAD;196;Prosiek,,č.d.26;68;0,2
+197;Prosiek,,garáž SAD;198;Prosiek,,otoč.;54;1
+198;Prosiek,,otoč.;68;Ižipovce;270;4
+198;Prosiek,,otoč.;197;Prosiek,,garáž SAD;72;1
+199;Prosiek,,rázc.;29;Bobrovník,Hliník,rázc.;108;2
+199;Prosiek,,rázc.;88;Lipt.Sielnica,,PS;432;2
+199;Prosiek,,rázc.;89;Lipt.Sielnica,,rázc.;126;1
+199;Prosiek,,rázc.;196;Prosiek,,č.d.26;216;2
+199;Prosiek,,rázc.;398;Prosiek,Zádiel;54;0,2
+200;Smrečany,,Širica;201;Smrečany,,kostol;91;1
+200;Smrečany,,Širica;461;Smrečany,,bytovky;71;0,2
+201;Smrečany,,kostol;200;Smrečany,,Širica;83;1
+201;Smrečany,,kostol;202;Smrečany,,otoč.;62;0,2
+202;Smrečany,,otoč.;201;Smrečany,,kostol;87;0,2
+202;Smrečany,,otoč.;241;Žiar,,cint.;83;1
+203;Nižná Boca,,Stred.Boca Herich;176;Nižná Boca,,Záhradník;154;2
+203;Nižná Boca,,Stred.Boca Herich;235;Vyšná Boca,,ZŠ;135;2
+204;Svätý Kríž,,Obecný úrad;206;Svätý Kríž,,Vyšný koniec;81;1
+204;Svätý Kríž,,Obecný úrad;207;Svätý Kríž,,ZŠ;68;0,2
+205;Svätý Kríž,,Cínovisko;46;Galovany,,č.d.1;230;2
+205;Svätý Kríž,,Cínovisko;47;Galovany,,č.d.51;216;2
+205;Svätý Kríž,,Cínovisko;48;Galovany,,rázc.;130;1
+205;Svätý Kríž,,Cínovisko;54;Gôtovany,,rázc.;108;3
+205;Svätý Kríž,,Cínovisko;207;Svätý Kríž,,ZŠ;94;1
+205;Svätý Kríž,,Cínovisko;209;Svätý Kríž,,rázc.;54;0,2
+206;Svätý Kríž,,Vyšný koniec;81;Lazisko,,Droppa;97;1
+206;Svätý Kríž,,Vyšný koniec;204;Svätý Kríž,,Obecný úrad;97;1
+206;Svätý Kríž,,Vyšný koniec;207;Svätý Kríž,,ZŠ;54;1
+207;Svätý Kríž,,ZŠ;204;Svätý Kríž,,Obecný úrad;63;0,2
+207;Svätý Kríž,,ZŠ;205;Svätý Kríž,,Cínovisko;75;1
+209;Svätý Kríž,,rázc.;47;Galovany,,č.d.51;162;2
+209;Svätý Kríž,,rázc.;48;Galovany,,rázc.;82;1
+209;Svätý Kríž,,rázc.;54;Gôtovany,,rázc.;110;3
+209;Svätý Kríž,,rázc.;205;Svätý Kríž,,Cínovisko;54;0,2
+210;Malužiná,,Svidovo rázc.;74;Kráľova Lehota,,Cestné stavby obal.;162;4
+210;Malužiná,,Svidovo rázc.;171;Malužiná,,Liptov;63;0,2
+210;Malužiná,,Svidovo rázc.;174;Kráľova Lehota,,Michalovo Gašparík;86;2
+210;Malužiná,,Svidovo rázc.;384;Kráľova Lehota,,Preglejka št.cesta;270;5
+211;Trstené,,otoč.;25;Bobrovec,,ZŠ;68;1
+212;Uhorská Ves,,centrum;125;Lipt.Ján,,ZŠ;81;1
+212;Uhorská Ves,,centrum;126;Uhorská Ves,,rázc.;58;1
+212;Uhorská Ves,,centrum;186;Podtureň,,Jednota;216;2
+212;Uhorská Ves,,centrum;187;Podtureň,,žel.zast.;162;2
+212;Uhorská Ves,,centrum;453;Lipt.Ján,,ul.Starojánska ZŠ;108;1
+213;Vavrišovo,,OcÚ;110;Lipt.Peter,,Bytovky;226;3
+213;Vavrišovo,,OcÚ;111;Lipt.Peter,,pomník;198;3
+213;Vavrišovo,,OcÚ;214;Vavrišovo,,pož.zbroj.;61;0,2
+213;Vavrišovo,,OcÚ;402;Jamník,,Jednota;405;6
+214;Vavrišovo,,pož.zbroj.;192;Pribylina,,ZŠ;220;3
+214;Vavrišovo,,pož.zbroj.;194;Pribylina,,pož.zbroj.;108;4
+214;Vavrišovo,,pož.zbroj.;213;Vavrišovo,,OcÚ;91;0,2
+216;Važec,,Jednota;217;Važec,,žel.nadjazd;103;1
+216;Važec,,Jednota;231;Východná,,Nahálka;486;8
+217;Važec,,žel.nadjazd;216;Važec,,Jednota;123;1
+217;Važec,,žel.nadjazd;231;Východná,,Nahálka;416;7
+218;Veľké Borové,,Ráztoka;60;Huty,,rázc.na Veľké Borové;135;2
+218;Veľké Borové,,Ráztoka;219;Veľké Borové,,Salaj;162;1
+219;Veľké Borové,,Salaj;140;Veľké Borové,,Jednota;81;0,2
+219;Veľké Borové,,Salaj;218;Veľké Borové,,Ráztoka;162;1
+220;Veľké Borové,,Škrlák;140;Veľké Borové,,Jednota;54;0,2
+221;Veterná Poruba,,OcÚ;222;Veterná Poruba,,č.d.5;108;0,2
+222;Veterná Poruba,,č.d.5;150;Lipt.Mikuláš,,Podbreziny;290;3
+222;Veterná Poruba,,č.d.5;221;Veterná Poruba,,OcÚ;142;0,2
+223;Vlachy,,Jednota;226;Vlachy,Vlašky,pri moste;72;1
+223;Vlachy,,Jednota;227;Vlachy,,rázc.;81;1
+224;Vlachy,Krmeš,Jednota;225;Vlachy,Krmeš,pri moste;68;0,2
+224;Vlachy,Krmeš,Jednota;227;Vlachy,,rázc.;68;0,2
+225;Vlachy,Krmeš,pri moste;224;Vlachy,Krmeš,Jednota;72;0,2
+225;Vlachy,Krmeš,pri moste;251;Ľubeľa,,rázc.;162;3
+226;Vlachy,Vlašky,pri moste;223;Vlachy,,Jednota;54;1
+227;Vlachy,,rázc.;223;Vlachy,,Jednota;54;1
+227;Vlachy,,rázc.;224;Vlachy,Krmeš,Jednota;81;0,2
+228;Východná,,Benzinol;65;Hybe,,otoč.;192;3
+228;Východná,,Benzinol;230;Východná,,Muráň;64;1
+229;Východná,,Jednota;231;Východná,,Nahálka;108;0,2
+230;Východná,,Muráň;228;Východná,,Benzinol;86;1
+230;Východná,,Muráň;229;Východná,,Jednota;54;0,2
+230;Východná,,Muráň;231;Východná,,Nahálka;84;0,2
+231;Východná,,Nahálka;217;Važec,,žel.nadjazd;398;7
+231;Východná,,Nahálka;229;Východná,,Jednota;108;0,2
+231;Východná,,Nahálka;230;Východná,,Muráň;89;0,2
+231;Východná,,Nahálka;232;Východná,,garáž SAD;78;0,2
+232;Východná,,garáž SAD;231;Východná,,Nahálka;81;0,2
+232;Východná,,garáž SAD;233;Východná,,rybník;351;3
+232;Východná,,garáž SAD;234;Východná,,žel.st.;351;3
+233;Východná,,rybník;232;Východná,,garáž SAD;324;3
+233;Východná,,rybník;234;Východná,,žel.st.;81;0,2
+234;Východná,,žel.st.;233;Východná,,rybník;94;0,2
+235;Vyšná Boca,,ZŠ;203;Nižná Boca,,Stred.Boca Herich;100;2
+235;Vyšná Boca,,ZŠ;236;Vyšná Boca,,Zacharovský;123;0,2
+236;Vyšná Boca,,Zacharovský;235;Vyšná Boca,,ZŠ;93;0,2
+238;Závažná Poruba,,Luhy;145;Lipt.Mikuláš,Okoličné,ZŠ;108;1
+238;Závažná Poruba,,Luhy;146;Lipt.Mikuláš,Okoličné,otoč.;54;1
+238;Závažná Poruba,,Luhy;150;Lipt.Mikuláš,,Podbreziny;108;3
+238;Závažná Poruba,,Luhy;395;Závažná Poruba,,pri pomníku;112;1
+239;Závažná Poruba,,otoč.;397;Závažná Poruba,,ul.p.Hrádkom;96;1
+240;Žiar,,Juráš;242;Žiar,,nocovňa SAD;66;0,2
+240;Žiar,,Juráš;439;Žiar,,Dolinky;66;1
+241;Žiar,,cint.;202;Smrečany,,otoč.;91;1
+241;Žiar,,cint.;242;Žiar,,nocovňa SAD;83;1
+242;Žiar,,nocovňa SAD;240;Žiar,,Juráš;83;0,2
+242;Žiar,,nocovňa SAD;241;Žiar,,cint.;91;1
+243;Žiar,,rekr.str.;244;Žiar,Žiarska dolina;119;1
+243;Žiar,,rekr.str.;439;Žiar,,Dolinky;54;0,2
+244;Žiar,Žiarska dolina;243;Žiar,,rekr.str.;97;1
+246;Ľubeľa,,Humenný;99;Lipt.Kľačany,,kostol;108;1
+246;Ľubeľa,,Humenný;100;Lipt.Kľačany,,samota;69;1
+246;Ľubeľa,,Humenný;249;Ľubeľa,,ZŠ;108;0,2
+246;Ľubeľa,,Humenný;250;Ľubeľa,,Na Váhe;69;0,2
+247;Ľubeľa,,Jednota;248;Ľubeľa,,lekáreň;68;0,2
+247;Ľubeľa,,Jednota;250;Ľubeľa,,Na Váhe;72;0,2
+248;Ľubeľa,,lekáreň;42;Dúbrava,,Dom služ.;117;2
+248;Ľubeľa,,lekáreň;247;Ľubeľa,,Jednota;77;0,2
+248;Ľubeľa,,lekáreň;249;Ľubeľa,,ZŠ;108;0,2
+249;Ľubeľa,,ZŠ;246;Ľubeľa,,Humenný;72;0,2
+249;Ľubeľa,,ZŠ;247;Ľubeľa,,Jednota;54;0,2
+249;Ľubeľa,,ZŠ;248;Ľubeľa,,lekáreň;81;0,2
+249;Ľubeľa,,ZŠ;250;Ľubeľa,,Na Váhe;108;0,2
+250;Ľubeľa,,Na Váhe;246;Ľubeľa,,Humenný;54;0,2
+250;Ľubeľa,,Na Váhe;247;Ľubeľa,,Jednota;65;0,2
+250;Ľubeľa,,Na Váhe;249;Ľubeľa,,ZŠ;108;0,2
+250;Ľubeľa,,Na Váhe;251;Ľubeľa,,rázc.;72;1
+251;Ľubeľa,,rázc.;51;Gôtovany,,Piatko;270;3
+251;Ľubeľa,,rázc.;54;Gôtovany,,rázc.;114;2
+251;Ľubeľa,,rázc.;167;Malatíny,,rázc.;120;2
+251;Ľubeľa,,rázc.;224;Vlachy,Krmeš,Jednota;270;3
+251;Ľubeľa,,rázc.;225;Vlachy,Krmeš,pri moste;144;3
+251;Ľubeľa,,rázc.;250;Ľubeľa,,Na Váhe;77;1
+251;Ľubeľa,,rázc.;253;Ľubeľa,,Sihotka;66;1
+252;Demänovská Dolina,,centr.park.;41;Demänovská Dolina,,autocamp.;108;1
+252;Demänovská Dolina,,centr.park.;136;Lipt.Mikuláš,Demänová,rázc.;180;3
+252;Demänovská Dolina,,centr.park.;411;Lipt.Mikuláš,Demänová,mlynisko;162;3
+253;Ľubeľa,,Sihotka;54;Gôtovany,,rázc.;78;1
+253;Ľubeľa,,Sihotka;251;Ľubeľa,,rázc.;61;1
+254;Ratkovo,,rázc.;262;Ratkovo;54;0,2
+254;Ratkovo,,rázc.;268;Turany,,pošta;270;4
+255;Martin,,Hviezdoslavova ul.;258;Martin,,štadión;162;1
+256;Martin,Košúty,zdrav.str.;257;Martin,,Sever obch.dom;108;1
+256;Martin,Košúty,zdrav.str.;263;Sučany,,Dom potravín;378;6
+257;Martin,,Sever obch.dom;256;Martin,Košúty,zdrav.str.;54;1
+257;Martin,,Sever obch.dom;260;Martin,,ul.A.Pietra;54;1
+258;Martin,,štadión;257;Martin,,Sever obch.dom;108;0,2
+259;Martin,,OÚNZ;261;Martin,,aut.st.;216;1
+260;Martin,,ul.A.Pietra;259;Martin,,OÚNZ;108;1
+261;Martin,,aut.st.;255;Martin,,Hviezdoslavova ul.;270;2
+262;Ratkovo;254;Ratkovo,,rázc.;108;0,2
+262;Ratkovo;269;Šútovo,,OcÚ;162;2
+263;Sučany,,Dom potravín;264;Sučany,,psych.liečebňa;162;1
+263;Sučany,,Dom potravín;265;Sučany,,rozvodňa;54;1
+264;Sučany,,psych.liečebňa;263;Sučany,,Dom potravín;162;1
+264;Sučany,,psych.liečebňa;268;Turany,,pošta;216;3
+265;Sučany,,rozvodňa;256;Martin,Košúty,zdrav.str.;270;4
+266;Šútovo,,odb.k Šútov.vodopádom;267;Šútovo,,Rieka lom;108;1
+266;Šútovo,,odb.k Šútov.vodopádom;269;Šútovo,,OcÚ;162;1
+267;Šútovo,,Rieka lom;266;Šútovo,,odb.k Šútov.vodopádom;54;1
+267;Šútovo,,Rieka lom;375;Kraľovany,,žel.st.;270;4
+268;Turany,,pošta;254;Ratkovo,,rázc.;270;4
+268;Turany,,pošta;264;Sučany,,psych.liečebňa;216;3
+269;Šútovo,,OcÚ;262;Ratkovo;162;2
+269;Šútovo,,OcÚ;266;Šútovo,,odb.k Šútov.vodopádom;108;1
+270;Hubová,,Babala;271;Hubová,,pri moste;113;2
+270;Hubová,,Babala;323;Ľubochňa;173;1
+271;Hubová,,pri moste;270;Hubová,,Babala;113;2
+271;Hubová,,pri moste;345;Ružomberok,Černová,kolónia;319;6
+271;Hubová,,pri moste;459;Ružomberok,,evanjelický kostol;648;11
+272;Kalameny,,kult.dom;273;Lúčky,,rázc.Kalameny;92;1
+273;Lúčky,,rázc.Kalameny;62;Lipt.Teplá,Madočany,RENOP;102;1
+273;Lúčky,,rázc.Kalameny;272;Kalameny,,kult.dom;115;1
+273;Lúčky,,rázc.Kalameny;325;Lúčky,,zdrav.str.;72;1
+274;Komjatná,,Babic;276;Komjatná,,Kočibal;54;1
+275;Komjatná,,Jednota;276;Komjatná,,Kočibal;76;0,2
+275;Komjatná,,Jednota;327;Komjatná,,pož.zbroj.;32;1
+276;Komjatná,,Kočibal;275;Komjatná,,Jednota;72;0,2
+276;Komjatná,,Kočibal;277;Komjatná,Studničná;189;2
+277;Komjatná,Studničná;274;Komjatná,,Babic;99;1
+277;Komjatná,Studničná;367;Valaská Dubová,,u Drobúľa;300;3
+277;Komjatná,Studničná;433;Komjatná,Studničná,Panská lúka;72;0,2
+278;Komjatná,,ZŠ;315;Komjatná,,otoč.;176;1
+278;Komjatná,,ZŠ;327;Komjatná,,pož.zbroj.;99;0,2
+279;Likavka,,Dom dôchodcov;337;Ružomberok,,AS;192;1
+280;Likavka,,Domiter;279;Likavka,,Dom dôchodcov;99;1
+280;Likavka,,Domiter;284;Likavka,,hrad;54;1
+280;Likavka,,Domiter;286;Likavka,,sklad BZ-Texicom;76;1
+281;Likavka,,Klačko;283;Likavka,,Nemček;54;1
+281;Likavka,,Klačko;286;Likavka,,sklad BZ-Texicom;72;1
+281;Likavka,,Klačko;334;Martinček,,OcÚ;225;1
+282;Likavka,,Kramariská;284;Likavka,,hrad;73;1
+282;Likavka,,Kramariská;365;Valaská Dubová,,OcÚ;275;4
+282;Likavka,,Kramariská;386;Jasenová;432;8
+283;Likavka,,Nemček;286;Likavka,,sklad BZ-Texicom;54;0,2
+284;Likavka,,hrad;280;Likavka,,Domiter;54;1
+284;Likavka,,hrad;282;Likavka,,Kramariská;61;1
+284;Likavka,,hrad;285;Likavka,,rázc.;70;1
+285;Likavka,,rázc.;279;Likavka,,Dom dôchodcov;64;1
+285;Likavka,,rázc.;284;Likavka,,hrad;77;1
+286;Likavka,,sklad BZ-Texicom;280;Likavka,,Domiter;62;1
+286;Likavka,,sklad BZ-Texicom;281;Likavka,,Klačko;58;1
+287;Lipt.Lúžna,,Brezniak;291;Lipt.Lúžna,,bytovka RD;61;0,2
+287;Lipt.Lúžna,,Brezniak;294;Lipt.Lúžna,,u Turončíka;74;1
+288;Lipt.Lúžna,,Hronec;293;Lipt.Lúžna,,nocovňa SAD;146;1
+289;Lipt.Lúžna,,Weiss;290;Lipt.Lúžna,,MŠ;111;0,2
+289;Lipt.Lúžna,,Weiss;293;Lipt.Lúžna,,nocovňa SAD;98;1
+290;Lipt.Lúžna,,MŠ;289;Lipt.Lúžna,,Weiss;101;0,2
+290;Lipt.Lúžna,,MŠ;291;Lipt.Lúžna,,bytovka RD;94;1
+291;Lipt.Lúžna,,bytovka RD;287;Lipt.Lúžna,,Brezniak;81;0,2
+291;Lipt.Lúžna,,bytovka RD;290;Lipt.Lúžna,,MŠ;84;1
+292;Lipt.Lúžna,,mäsna u Vesel.;294;Lipt.Lúžna,,u Turončíka;68;0,2
+292;Lipt.Lúžna,,mäsna u Vesel.;301;Lipt.Osada,,č.d.113;256;3
+292;Lipt.Lúžna,,mäsna u Vesel.;333;Lipt.Osada,,zdrav.str.;223;3
+293;Lipt.Lúžna,,nocovňa SAD;288;Lipt.Lúžna,,Hronec;189;1
+293;Lipt.Lúžna,,nocovňa SAD;289;Lipt.Lúžna,,Weiss;111;1
+294;Lipt.Lúžna,,u Turončíka;287;Lipt.Lúžna,,Brezniak;57;1
+294;Lipt.Lúžna,,u Turončíka;292;Lipt.Lúžna,,mäsna u Vesel.;94;0,2
+295;Lipt.Osada,,Jednota;296;Lipt.Osada,Korytnica-kúpele,rázc.;338;8
+295;Lipt.Osada,,Jednota;299;Lipt.Osada,,RD;108;1
+295;Lipt.Osada,,Jednota;300;Lipt.Osada,,Skalno;112;2
+295;Lipt.Osada,,Jednota;333;Lipt.Osada,,zdrav.str.;243;1
+295;Lipt.Osada,,Jednota;340;Ružomberok,Biely Potok,Podsuchá;259;5
+296;Lipt.Osada,Korytnica-kúpele,rázc.;5;Donovaly,,Pod Magurou-ATC;216;4
+296;Lipt.Osada,Korytnica-kúpele,rázc.;6;Donovaly,,centrum;324;5
+296;Lipt.Osada,Korytnica-kúpele,rázc.;295;Lipt.Osada,,Jednota;558;8
+296;Lipt.Osada,Korytnica-kúpele,rázc.;297;Lipt.Osada,Korytnica-kúpele;216;1
+296;Lipt.Osada,Korytnica-kúpele,rázc.;298;Lipt.Osada,,Patočiny horáreň;216;3
+296;Lipt.Osada,Korytnica-kúpele,rázc.;299;Lipt.Osada,,RD;324;7
+297;Lipt.Osada,Korytnica-kúpele;296;Lipt.Osada,Korytnica-kúpele,rázc.;162;1
+298;Lipt.Osada,,Patočiny horáreň;296;Lipt.Osada,Korytnica-kúpele,rázc.;108;3
+298;Lipt.Osada,,Patočiny horáreň;299;Lipt.Osada,,RD;162;4
+299;Lipt.Osada,,RD;295;Lipt.Osada,,Jednota;162;1
+299;Lipt.Osada,,RD;298;Lipt.Osada,,Patočiny horáreň;162;4
+300;Lipt.Osada,,Skalno;295;Lipt.Osada,,Jednota;183;2
+300;Lipt.Osada,,Skalno;404;Lipt.Revúce,Nižná Revúca,Jednota;216;3
+300;Lipt.Osada,,Skalno;418;Lipt.Revúce,Nižná Revúca,r.Teplô;100;0,2
+300;Lipt.Osada,,Skalno;469;Lipt.Osada,,pekáreň;270;2
+301;Lipt.Osada,,č.d.113;292;Lipt.Lúžna,,mäsna u Vesel.;246;3
+301;Lipt.Osada,,č.d.113;333;Lipt.Osada,,zdrav.str.;31;0,2
+301;Lipt.Osada,,č.d.113;469;Lipt.Osada,,pekáreň;115;1
+302;Lipt.Štiavnica,,Kľučiny;303;Lipt.Štiavnica,,garáž SAD;324;1
+302;Lipt.Štiavnica,,Kľučiny;329;Ludrová,,RD;108;2
+302;Lipt.Štiavnica,,Kľučiny;335;Štiavnička,,sušička RD;79;1
+302;Lipt.Štiavnica,,Kľučiny;405;Lipt.Štiavnica,,mlyn;54;0,2
+302;Lipt.Štiavnica,,Kľučiny;468;Ludrová,,otočka;378;4
+303;Lipt.Štiavnica,,garáž SAD;304;Lipt.Štiavnica,,otoč.;139;1
+303;Lipt.Štiavnica,,garáž SAD;426;Lipt.Štiavnica,,pri kaplnke;71;0,2
+304;Lipt.Štiavnica,,otoč.;303;Lipt.Štiavnica,,garáž SAD;96;1
+305;Lipt.Sliače,Nižný Sliač,Bielený;307;Lipt.Sliače,Nižný Sliač,Smištík;62;1
+305;Lipt.Sliače,Nižný Sliač,Bielený;308;Lipt.Sliače,Nižný Sliač,pri moste;60;0,2
+306;Lipt.Sliače,Stredný Sliač,Dielnica;308;Lipt.Sliače,Nižný Sliač,pri moste;100;1
+306;Lipt.Sliače,Stredný Sliač,Dielnica;310;Lipt.Sliače,Stredný Sliač,kostol;74;1
+306;Lipt.Sliače,Stredný Sliač,Dielnica;311;Lipt.Sliače,Stredný Sliač,ZŠ;69;1
+307;Lipt.Sliače,Nižný Sliač,Smištík;305;Lipt.Sliače,Nižný Sliač,Bielený;58;1
+307;Lipt.Sliače,Nižný Sliač,Smištík;316;Lipt.Sliače,,rázc.;54;1
+307;Lipt.Sliače,Nižný Sliač,Smištík;445;Lisková,,križ.;130;2
+308;Lipt.Sliače,Nižný Sliač,pri moste;305;Lipt.Sliače,Nižný Sliač,Bielený;77;0,2
+308;Lipt.Sliače,Nižný Sliač,pri moste;306;Lipt.Sliače,Stredný Sliač,Dielnica;100;1
+309;Lipt.Sliače,Stredný Sliač,Gajdoš;310;Lipt.Sliače,Stredný Sliač,kostol;108;0,2
+309;Lipt.Sliače,Stredný Sliač,Gajdoš;311;Lipt.Sliače,Stredný Sliač,ZŠ;120;0,2
+309;Lipt.Sliače,Stredný Sliač,Gajdoš;312;Lipt.Sliače,Stredný Sliač,otoč.;102;1
+310;Lipt.Sliače,Stredný Sliač,kostol;306;Lipt.Sliače,Stredný Sliač,Dielnica;71;1
+310;Lipt.Sliače,Stredný Sliač,kostol;309;Lipt.Sliače,Stredný Sliač,Gajdoš;54;0,2
+310;Lipt.Sliače,Stredný Sliač,kostol;311;Lipt.Sliače,Stredný Sliač,ZŠ;54;0,2
+310;Lipt.Sliače,Stredný Sliač,kostol;312;Lipt.Sliače,Stredný Sliač,otoč.;108;1
+310;Lipt.Sliače,Stredný Sliač,kostol;407;Lipt.Sliače,Stredný Sliač,Dom smútku;57;0,2
+311;Lipt.Sliače,Stredný Sliač,ZŠ;306;Lipt.Sliače,Stredný Sliač,Dielnica;66;1
+311;Lipt.Sliače,Stredný Sliač,ZŠ;309;Lipt.Sliače,Stredný Sliač,Gajdoš;101;0,2
+311;Lipt.Sliače,Stredný Sliač,ZŠ;310;Lipt.Sliače,Stredný Sliač,kostol;54;0,2
+312;Lipt.Sliače,Stredný Sliač,otoč.;309;Lipt.Sliače,Stredný Sliač,Gajdoš;81;1
+313;Lipt.Sliače,Vyšný Sliač,garáž;314;Lipt.Sliače,Vyšný Sliač,u Cabana;197;0,2
+313;Lipt.Sliače,Vyšný Sliač,garáž;429;Lipt.Sliače,Vyšný Sliač,družstvo;84;1
+314;Lipt.Sliače,Vyšný Sliač,u Cabana;313;Lipt.Sliače,Vyšný Sliač,garáž;124;0,2
+315;Komjatná,,otoč.;278;Komjatná,,ZŠ;130;1
+316;Lipt.Sliače,,rázc.;19;Ivachnová,,rázc.;184;3
+316;Lipt.Sliače,,rázc.;307;Lipt.Sliače,Nižný Sliač,Smištík;54;1
+316;Lipt.Sliače,,rázc.;445;Lisková,,križ.;68;1
+317;Turík,,OcÚ;318;Turík,,rázc.;108;1
+317;Turík,,OcÚ;350;Turík,,RD;64;1
+318;Turík,,rázc.;90;Lipt.Teplá,,ŠL;122;2
+318;Turík,,rázc.;92;Lipt.Teplá,,rázc.;122;2
+318;Turík,,rázc.;317;Turík,,OcÚ;135;1
+318;Turík,,rázc.;320;Lisková,,rázc.RD;165;2
+318;Turík,,rázc.;350;Turík,,RD;59;0,2
+319;Lisková,,kult.dom;318;Turík,,rázc.;216;3
+319;Lisková,,kult.dom;320;Lisková,,rázc.RD;94;1
+319;Lisková,,kult.dom;445;Lisková,,križ.;152;1
+320;Lisková,,rázc.RD;318;Turík,,rázc.;142;2
+320;Lisková,,rázc.RD;319;Lisková,,kult.dom;114;1
+321;Lipt.Osada,,Barboriná horáreň;297;Lipt.Osada,Korytnica-kúpele;324;2
+322;Ľubochňa,,Korbelka;323;Ľubochňa;176;1
+322;Ľubochňa,,Korbelka;360;Stankovany,,pri moste;101;1
+323;Ľubochňa;270;Hubová,,Babala;128;1
+323;Ľubochňa;322;Ľubochňa,,Korbelka;115;1
+324;Lúčky,Lúčky-kúpele,otoč.;326;Lúčky,,OcÚ;114;0,2
+325;Lúčky,,zdrav.str.;272;Kalameny,,kult.dom;162;2
+325;Lúčky,,zdrav.str.;273;Lúčky,,rázc.Kalameny;79;1
+325;Lúčky,,zdrav.str.;326;Lúčky,,OcÚ;99;1
+326;Lúčky,,OcÚ;324;Lúčky,Lúčky-kúpele,otoč.;168;0,2
+326;Lúčky,,OcÚ;325;Lúčky,,zdrav.str.;108;1
+327;Komjatná,,pož.zbroj.;275;Komjatná,,Jednota;68;1
+327;Komjatná,,pož.zbroj.;458;Komjatná,,Pod Stráňou;50;0,2
+328;Ludrová,,Jednota;331;Ludrová,,č.d.202;68;0,2
+328;Ludrová,,Jednota;332;Ludrová,,č.d.349;71;1
+329;Ludrová,,RD;302;Lipt.Štiavnica,,Kľučiny;126;2
+329;Ludrová,,RD;332;Ludrová,,č.d.349;54;0,2
+329;Ludrová,,RD;335;Štiavnička,,sušička RD;65;1
+330;Ludrová,,č.d.155;331;Ludrová,,č.d.202;78;1
+330;Ludrová,,č.d.155;468;Ludrová,,otočka;50;0,2
+331;Ludrová,,č.d.202;328;Ludrová,,Jednota;94;0,2
+331;Ludrová,,č.d.202;330;Ludrová,,č.d.155;83;1
+332;Ludrová,,č.d.349;328;Ludrová,,Jednota;83;1
+332;Ludrová,,č.d.349;329;Ludrová,,RD;54;0,2
+333;Lipt.Osada,,zdrav.str.;292;Lipt.Lúžna,,mäsna u Vesel.;224;3
+333;Lipt.Osada,,zdrav.str.;295;Lipt.Osada,,Jednota;162;1
+333;Lipt.Osada,,zdrav.str.;301;Lipt.Osada,,č.d.113;47;0,2
+333;Lipt.Osada,,zdrav.str.;469;Lipt.Osada,,pekáreň;108;1
+334;Martinček,,OcÚ;281;Likavka,,Klačko;170;1
+335;Štiavnička,,sušička RD;302;Lipt.Štiavnica,,Kľučiny;83;1
+335;Štiavnička,,sušička RD;329;Ludrová,,RD;76;1
+335;Štiavnička,,sušička RD;363;Štiavnička,,most;72;1
+336;Štiavnička,,odbočka LDCH;343;Ružomberok,,Celulózka;130;1
+336;Štiavnička,,odbočka LDCH;362;Štiavnička,,MŠ;43;1
+336;Štiavnička,,odbočka LDCH;363;Štiavnička,,most;77;1
+337;Ružomberok,,AS;280;Likavka,,Domiter;157;2
+337;Ružomberok,,AS;285;Likavka,,rázc.;169;2
+337;Ružomberok,,AS;351;Ružomberok,,SPŠ;216;1
+337;Ružomberok,,AS;352;Ružomberok,,Savoy;216;1
+337;Ružomberok,,AS;353;Ružomberok,,Sihoť ZŠ;288;0,2
+337;Ružomberok,,AS;386;Jasenová;756;12
+337;Ružomberok,,AS;406;Ružomberok,,Supra-vily;256;1
+337;Ružomberok,,AS;417;Ružomberok,,Supra-stred;241;1
+338;Ružomberok,Biely Potok,Bohunka;339;Ružomberok,Biely Potok,Kovostav;54;1
+338;Ružomberok,Biely Potok,Bohunka;341;Ružomberok,Biely Potok,Slovpap;42;1
+338;Ružomberok,Biely Potok,Bohunka;443;Ružomberok,Biely Potok,Trlenská dolina;42;0,2
+339;Ružomberok,Biely Potok,Kovostav;338;Ružomberok,Biely Potok,Bohunka;54;1
+339;Ružomberok,Biely Potok,Kovostav;342;Ružomberok,Biely Potok,pri moste;108;2
+339;Ružomberok,Biely Potok,Kovostav;442;Ružomberok,Biely Potok,Do Uhliska;44;1
+339;Ružomberok,Biely Potok,Kovostav;443;Ružomberok,Biely Potok,Trlenská dolina;50;1
+340;Ružomberok,Biely Potok,Podsuchá;295;Lipt.Osada,,Jednota;307;5
+340;Ružomberok,Biely Potok,Podsuchá;341;Ružomberok,Biely Potok,Slovpap;106;2
+340;Ružomberok,Biely Potok,Podsuchá;443;Ružomberok,Biely Potok,Trlenská dolina;162;4
+340;Ružomberok,Biely Potok,Podsuchá;469;Lipt.Osada,,pekáreň;273;5
+341;Ružomberok,Biely Potok,Slovpap;338;Ružomberok,Biely Potok,Bohunka;44;1
+341;Ružomberok,Biely Potok,Slovpap;340;Ružomberok,Biely Potok,Podsuchá;114;2
+342;Ružomberok,Biely Potok,pri moste;356;Ružomberok,,sídl.SNP;243;3
+342;Ružomberok,Biely Potok,pri moste;358;Ružomberok,,Vápenka;108;1
+342;Ružomberok,Biely Potok,pri moste;441;Ružomberok,Biely Potok,Raveň;48;1
+342;Ružomberok,Biely Potok,pri moste;442;Ružomberok,Biely Potok,Do Uhliska;54;1
+342;Ružomberok,Biely Potok,pri moste;443;Ružomberok,Biely Potok,Trlenská dolina;135;2
+343;Ružomberok,,Celulózka;319;Lisková,,kult.dom;162;3
+343;Ružomberok,,Celulózka;336;Štiavnička,,odbočka LDCH;83;1
+343;Ružomberok,,Celulózka;355;Ružomberok,,Supra;112;1
+343;Ružomberok,,Celulózka;417;Ružomberok,,Supra-stred;155;1
+343;Ružomberok,,Celulózka;445;Lisková,,križ.;85;2
+345;Ružomberok,Černová,kolónia;271;Hubová,,pri moste;318;6
+345;Ružomberok,Černová,kolónia;348;Ružomberok,,Nová Černová;113;2
+346;Ružomberok,,SOU poľnohospodárske;349;Ružomberok,,Pod skalami;54;1
+346;Ružomberok,,SOU poľnohospodárske;354;Ružomberok,,Solo horná brána;90;0,2
+347;Ružomberok,,Mladá generácia;348;Ružomberok,,Nová Černová;97;1
+347;Ružomberok,,Mladá generácia;351;Ružomberok,,SPŠ;86;1
+348;Ružomberok,,Nová Černová;271;Hubová,,pri moste;378;8
+348;Ružomberok,,Nová Černová;345;Ružomberok,Černová,kolónia;96;2
+348;Ružomberok,,Nová Černová;347;Ružomberok,,Mladá generácia;108;1
+349;Ružomberok,,Pod skalami;346;Ružomberok,,SOU poľnohospodárske;54;1
+349;Ružomberok,,Pod skalami;357;Ružomberok,,tehelňa;54;1
+349;Ružomberok,,Pod skalami;358;Ružomberok,,Vápenka;54;1
+350;Turík,,RD;317;Turík,,OcÚ;93;1
+350;Turík,,RD;318;Turík,,rázc.;59;0,2
+351;Ružomberok,,SPŠ;337;Ružomberok,,AS;243;1
+351;Ružomberok,,SPŠ;347;Ružomberok,,Mladá generácia;108;1
+352;Ružomberok,,Savoy;337;Ružomberok,,AS;270;1
+352;Ružomberok,,Savoy;354;Ružomberok,,Solo horná brána;162;1
+352;Ružomberok,,Savoy;460;Ružomberok,,Nám. A.Hlinku;108;1
+353;Ružomberok,,Sihoť ZŠ;337;Ružomberok,,AS;270;0,2
+353;Ružomberok,,Sihoť ZŠ;451;Ružomberok,,Roveň Vojenská nem.;66;1
+354;Ružomberok,,Solo horná brána;346;Ružomberok,,SOU poľnohospodárske;54;0,2
+354;Ružomberok,,Solo horná brána;352;Ružomberok,,Savoy;126;1
+355;Ružomberok,,Supra;337;Ružomberok,,AS;237;1
+356;Ružomberok,,sídl.SNP;337;Ružomberok,,AS;288;2
+356;Ružomberok,,sídl.SNP;342;Ružomberok,Biely Potok,pri moste;216;3
+356;Ružomberok,,sídl.SNP;355;Ružomberok,,Supra;135;1
+356;Ružomberok,,sídl.SNP;357;Ružomberok,,tehelňa;68;0,2
+356;Ružomberok,,sídl.SNP;417;Ružomberok,,Supra-stred;112;1
+357;Ružomberok,,tehelňa;349;Ružomberok,,Pod skalami;58;1
+357;Ružomberok,,tehelňa;356;Ružomberok,,sídl.SNP;95;0,2
+358;Ružomberok,,Vápenka;349;Ružomberok,,Pod skalami;54;1
+358;Ružomberok,,Vápenka;441;Ružomberok,Biely Potok,Raveň;50;0,2
+359;Stankovany,Rojkov;360;Stankovany,,pri moste;115;1
+359;Stankovany,Rojkov;375;Kraľovany,,žel.st.;223;3
+360;Stankovany,,pri moste;322;Ľubochňa,,Korbelka;119;1
+360;Stankovany,,pri moste;438;Stankovany,Rojkov,bar;61;1
+360;Stankovany,,pri moste;452;Stankovany,,Strakov;54;0,2
+362;Štiavnička,,MŠ;336;Štiavnička,,odbočka LDCH;54;1
+362;Štiavnička,,MŠ;363;Štiavnička,,most;54;0,2
+363;Štiavnička,,most;335;Štiavnička,,sušička RD;56;1
+363;Štiavnička,,most;336;Štiavnička,,odbočka LDCH;88;1
+363;Štiavnička,,most;362;Štiavnička,,MŠ;22;0,2
+364;Lipt.Michal,,pod cintorínom;17;Bešeňová,,hotel Sumit;54;1
+365;Valaská Dubová,,OcÚ;282;Likavka,,Kramariská;250;4
+365;Valaská Dubová,,OcÚ;367;Valaská Dubová,,u Drobúľa;68;0,2
+367;Valaská Dubová,,u Drobúľa;277;Komjatná,Studničná;324;3
+367;Valaská Dubová,,u Drobúľa;365;Valaská Dubová,,OcÚ;81;0,2
+367;Valaská Dubová,,u Drobúľa;386;Jasenová;291;4
+367;Valaská Dubová,,u Drobúľa;433;Komjatná,Studničná,Panská lúka;245;3
+369;Lipt.Teplá,,Prefa;93;Lipt.Teplá,,žel.st.;81;0,2
+369;Lipt.Teplá,,Prefa;464;Bešeňová,,Sihoť;54;1
+371;Dolný Kubín,,Alej slobody;374;Dolný Kubín,,aut.st.;221;1
+371;Dolný Kubín,,Alej slobody;391;Dolný Kubín,,Matúškova;116;1
+372;Dolný Kubín,,SAD;373;Dolný Kubín,Mokraď,priem.park;54;1
+372;Dolný Kubín,,SAD;374;Dolný Kubín,,aut.st.;180;2
+373;Dolný Kubín,Mokraď,priem.park;372;Dolný Kubín,,SAD;108;1
+373;Dolný Kubín,Mokraď,priem.park;392;Dolný Kubín,Mokraď,Tech.služby;176;0,2
+374;Dolný Kubín,,aut.st.;371;Dolný Kubín,,Alej slobody;230;1
+374;Dolný Kubín,,aut.st.;372;Dolný Kubín,,SAD;202;2
+375;Kraľovany,,žel.st.;267;Šútovo,,Rieka lom;324;4
+375;Kraľovany,,žel.st.;359;Stankovany,Rojkov;209;3
+377;Pribylina,,Zruby;189;Pribylina,,Kamenná dol.;81;1
+377;Pribylina,,Zruby;190;Pribylina,,Kokavský most;108;2
+377;Pribylina,,Zruby;390;Pribylina,,Permon;180;1
+383;Bobrovec,,Luhy;23;Bobrovec,,Rakovica;77;0,2
+383;Bobrovec,,Luhy;71;Jalovec,,ZŠ;130;2
+383;Bobrovec,,Luhy;72;Jalovec,,most;74;2
+384;Kráľova Lehota,,Preglejka št.cesta;74;Kráľova Lehota,,Cestné stavby obal.;108;1
+384;Kráľova Lehota,,Preglejka št.cesta;77;Kráľova Lehota,,žel.st.;140;1
+384;Kráľova Lehota,,Preglejka št.cesta;174;Kráľova Lehota,,Michalovo Gašparík;108;3
+384;Kráľova Lehota,,Preglejka št.cesta;400;Hybe,,rázc.na Kráľovu Lehotu;54;1
+386;Jasenová;282;Likavka,,Kramariská;486;8
+386;Jasenová;284;Likavka,,hrad;594;9
+386;Jasenová;367;Valaská Dubová,,u Drobúľa;300;4
+386;Jasenová;371;Dolný Kubín,,Alej slobody;432;5
+386;Jasenová;387;Vyšný Kubín,,rázc.;105;2
+387;Vyšný Kubín,,rázc.;386;Jasenová;97;2
+387;Vyšný Kubín,,rázc.;388;Dolný Kubín,,Banisko;102;1
+388;Dolný Kubín,,Banisko;387;Vyšný Kubín,,rázc.;108;1
+388;Dolný Kubín,,Banisko;391;Dolný Kubín,,Matúškova;105;1
+390;Pribylina,,Permon;377;Pribylina,,Zruby;144;1
+391;Dolný Kubín,,Matúškova;371;Dolný Kubín,,Alej slobody;111;1
+391;Dolný Kubín,,Matúškova;386;Jasenová;216;4
+391;Dolný Kubín,,Matúškova;388;Dolný Kubín,,Banisko;111;1
+392;Dolný Kubín,Mokraď,Tech.služby;373;Dolný Kubín,Mokraď,priem.park;90;0,2
+393;Lipt.Trnovec,,ATC;161;Lipt.Trnovec,,Krivý kút;108;2
+393;Lipt.Trnovec,,ATC;440;Lipt.Mikuláš,,Aqua Park;162;2
+393;Lipt.Trnovec,,ATC;467;Lipt.Mikuláš,,ul.Štefánikova;216;5
+394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;24;Bobrovec,,Škorupovo;66;1
+394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;408;Lipt.Mikuláš,Lipt.Ondrašová,otoč.;54;1
+394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;409;Lipt.Mikuláš,Lipt.Ondrašová,most;62;0,2
+395;Závažná Poruba,,pri pomníku;238;Závažná Poruba,,Luhy;112;1
+395;Závažná Poruba,,pri pomníku;396;Závažná Poruba,,kult.dom;66;0,2
+396;Závažná Poruba,,kult.dom;395;Závažná Poruba,,pri pomníku;77;0,2
+396;Závažná Poruba,,kult.dom;397;Závažná Poruba,,ul.p.Hrádkom;69;1
+397;Závažná Poruba,,ul.p.Hrádkom;239;Závažná Poruba,,otoč.;100;1
+397;Závažná Poruba,,ul.p.Hrádkom;396;Závažná Poruba,,kult.dom;93;1
+398;Prosiek,Zádiel;68;Ižipovce;216;1
+398;Prosiek,Zádiel;196;Prosiek,,č.d.26;97;2
+399;Lipt.Mikuláš,,ul.Hurbanova MŠ;135;Lipt.Mikuláš,,centrum;202;1
+399;Lipt.Mikuláš,,ul.Hurbanova MŠ;148;Lipt.Mikuláš,Palúdzka,ZŠ;151;1
+399;Lipt.Mikuláš,,ul.Hurbanova MŠ;149;Lipt.Mikuláš,Palúdzka,nem.;130;1
+400;Hybe,,rázc.na Kráľovu Lehotu;61;Hybe,,Lehotský Adam;162;3
+400;Hybe,,rázc.na Kráľovu Lehotu;63;Hybe,,motel;88;1
+400;Hybe,,rázc.na Kráľovu Lehotu;64;Hybe,,nám.;216;4
+400;Hybe,,rázc.na Kráľovu Lehotu;108;Lipt.Hrádok,,Jánoškov domov;162;2
+400;Hybe,,rázc.na Kráľovu Lehotu;113;Lipt.Hrádok,,Maša;73;1
+401;Lipt.Mikuláš,,AS;135;Lipt.Mikuláš,,centrum;252;2
+401;Lipt.Mikuláš,,AS;141;Lipt.Mikuláš,,ul.Revolučná Lidl;108;1
+401;Lipt.Mikuláš,,AS;148;Lipt.Mikuláš,Palúdzka,ZŠ;202;2
+401;Lipt.Mikuláš,,AS;149;Lipt.Mikuláš,Palúdzka,nem.;212;2
+401;Lipt.Mikuláš,,AS;153;Lipt.Mikuláš,,hotel Jánošík;159;1
+401;Lipt.Mikuláš,,AS;399;Lipt.Mikuláš,,ul.Hurbanova MŠ;106;1
+402;Jamník,,Jednota;73;Jamník,,RD otoč.;144;1
+402;Jamník,,Jednota;168;Jamník,,Mokraď;104;1
+403;Pribylina,,Rač.dol.ráz.h.Esperanto;188;Pribylina,,Hrdovo;216;4
+403;Pribylina,,Rač.dol.ráz.h.Esperanto;191;Pribylina,,Potôčky;108;3
+403;Pribylina,,Rač.dol.ráz.h.Esperanto;193;Pribylina,,garáž SAD;144;1
+404;Lipt.Revúce,Nižná Revúca,Jednota;418;Lipt.Revúce,Nižná Revúca,r.Teplô;116;3
+404;Lipt.Revúce,Nižná Revúca,Jednota;419;Lipt.Revúce,Nižná Revúca,Rosa;72;0,2
+405;Lipt.Štiavnica,,mlyn;302;Lipt.Štiavnica,,Kľučiny;51;0,2
+405;Lipt.Štiavnica,,mlyn;426;Lipt.Štiavnica,,pri kaplnke;54;1
+406;Ružomberok,,Supra-vily;343;Ružomberok,,Celulózka;101;1
+406;Ružomberok,,Supra-vily;445;Lisková,,križ.;148;3
+407;Lipt.Sliače,Stredný Sliač,Dom smútku;310;Lipt.Sliače,Stredný Sliač,kostol;80;0,2
+407;Lipt.Sliače,Stredný Sliač,Dom smútku;311;Lipt.Sliače,Stredný Sliač,ZŠ;270;0,2
+407;Lipt.Sliače,Stredný Sliač,Dom smútku;429;Lipt.Sliače,Vyšný Sliač,družstvo;103;1
+408;Lipt.Mikuláš,Lipt.Ondrašová,otoč.;24;Bobrovec,,Škorupovo;54;0,2
+408;Lipt.Mikuláš,Lipt.Ondrašová,otoč.;394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;54;1
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;139;Lipt.Mikuláš,,Komenského ul.MŠ;157;2
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;163;Lipt.Trnovec,,rázc.;234;4
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;394;Lipt.Mikuláš,Lipt.Ondrašová,kost.;64;0,2
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;401;Lipt.Mikuláš,,AS;216;2
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;440;Lipt.Mikuláš,,Aqua Park;166;2
+409;Lipt.Mikuláš,Lipt.Ondrašová,most;467;Lipt.Mikuláš,,ul.Štefánikova;83;1
+410;Lipt.Mikuláš,Palúdzka,ul.Palugyayho;147;Lipt.Mikuláš,Palúdzka,LAS;54;0,2
+410;Lipt.Mikuláš,Palúdzka,ul.Palugyayho;149;Lipt.Mikuláš,Palúdzka,nem.;86;1
+411;Lipt.Mikuláš,Demänová,mlynisko;136;Lipt.Mikuláš,Demänová,rázc.;135;0,2
+411;Lipt.Mikuláš,Demänová,mlynisko;413;Lipt.Mikuláš,Bodice,Jednota;108;0,2
+412;Lipt.Mikuláš,Bodice,kostol;411;Lipt.Mikuláš,Demänová,mlynisko;54;0,2
+413;Lipt.Mikuláš,Bodice,Jednota;412;Lipt.Mikuláš,Bodice,kostol;54;0,2
+414;Lipt.Mikuláš,,Podbreziny Juh;146;Lipt.Mikuláš,Okoličné,otoč.;54;2
+415;Lipt.Mikuláš,,Podbreziny otoč.;150;Lipt.Mikuláš,,Podbreziny;54;0,2
+416;Kvačany,,SSC;55;Huty,,Javorinský potok;675;7
+416;Kvačany,,SSC;96;Lipt.Matiašovce,,SSC;351;5
+417;Ružomberok,,Supra-stred;337;Ružomberok,,AS;253;1
+417;Ružomberok,,Supra-stred;356;Ružomberok,,sídl.SNP;123;1
+417;Ružomberok,,Supra-stred;451;Ružomberok,,Roveň Vojenská nem.;108;0,2
+418;Lipt.Revúce,Nižná Revúca,r.Teplô;300;Lipt.Osada,,Skalno;100;0,2
+418;Lipt.Revúce,Nižná Revúca,r.Teplô;404;Lipt.Revúce,Nižná Revúca,Jednota;147;3
+419;Lipt.Revúce,Nižná Revúca,Rosa;404;Lipt.Revúce,Nižná Revúca,Jednota;85;0,2
+419;Lipt.Revúce,Nižná Revúca,Rosa;420;Lipt.Revúce,Stredná Revúca,ZŠ;144;1
+420;Lipt.Revúce,Stredná Revúca,ZŠ;419;Lipt.Revúce,Nižná Revúca,Rosa;104;1
+420;Lipt.Revúce,Stredná Revúca,ZŠ;421;Lipt.Revúce,Stredná Revúca,Migra;76;1
+421;Lipt.Revúce,Stredná Revúca,Migra;420;Lipt.Revúce,Stredná Revúca,ZŠ;108;1
+421;Lipt.Revúce,Stredná Revúca,Migra;422;Lipt.Revúce,Stredná Revúca,pož.zbr.;94;1
+422;Lipt.Revúce,Stredná Revúca,pož.zbr.;421;Lipt.Revúce,Stredná Revúca,Migra;73;1
+422;Lipt.Revúce,Stredná Revúca,pož.zbr.;423;Lipt.Revúce,Stredná Revúca,Vrbina;79;0,2
+423;Lipt.Revúce,Stredná Revúca,Vrbina;422;Lipt.Revúce,Stredná Revúca,pož.zbr.;104;0,2
+423;Lipt.Revúce,Stredná Revúca,Vrbina;424;Lipt.Revúce,Vyšná Revúca,Pilná;83;1
+424;Lipt.Revúce,Vyšná Revúca,Pilná;423;Lipt.Revúce,Stredná Revúca,Vrbina;108;1
+424;Lipt.Revúce,Vyšná Revúca,Pilná;425;Lipt.Revúce,Vyšná Revúca,Jednota;155;1
+425;Lipt.Revúce,Vyšná Revúca,Jednota;424;Lipt.Revúce,Vyšná Revúca,Pilná;104;1
+426;Lipt.Štiavnica,,pri kaplnke;303;Lipt.Štiavnica,,garáž SAD;60;0,2
+426;Lipt.Štiavnica,,pri kaplnke;405;Lipt.Štiavnica,,mlyn;54;1
+427;Kvačany,,garáž SAD;78;Kvačany,Dlhá Lúka;108;1
+427;Kvačany,,garáž SAD;79;Kvačany,,RD;90;0,2
+427;Kvačany,,garáž SAD;80;Kvačany,,ZŠ;114;1
+428;Lazisko,,garáž SAD;81;Lazisko,,Droppa;69;0,2
+429;Lipt.Sliače,Vyšný Sliač,družstvo;313;Lipt.Sliače,Vyšný Sliač,garáž;70;1
+429;Lipt.Sliače,Vyšný Sliač,družstvo;407;Lipt.Sliače,Stredný Sliač,Dom smútku;100;1
+430;Lipt.Matiašovce,,kaplnka;96;Lipt.Matiašovce,,SSC;162;2
+430;Lipt.Matiašovce,,kaplnka;101;Lipt.Matiašovce,Vyšné Matiašovce;90;1
+430;Lipt.Matiašovce,,kaplnka;102;Lipt.Matiašovce,,pož.zbroj.;72;0,2
+431;Lipt.Hrádok,,Alcatel;120;Lipt.Hrádok,,ZŠ;144;0,7
+431;Lipt.Hrádok,,Alcatel;123;Lipt.Hrádok,,žel.st.;370;1,9
+431;Lipt.Hrádok,,Alcatel;138;Lipt.Hrádok,,SOUE;54;0,2
+432;Huty,,Dolinky;58;Huty,,ZŠ;54;1
+432;Huty,,Dolinky;59;Huty,,rázc.na Malé Borové;81;1
+433;Komjatná,Studničná,Panská lúka;277;Komjatná,Studničná;59;0,2
+433;Komjatná,Studničná,Panská lúka;367;Valaská Dubová,,u Drobúľa;216;3
+436;Lipt.Mikuláš,,Močiare Voj.akad.;136;Lipt.Mikuláš,Demänová,rázc.;108;1
+436;Lipt.Mikuláš,,Močiare Voj.akad.;143;Lipt.Mikuláš,,lekáreň;216;3
+436;Lipt.Mikuláš,,Močiare Voj.akad.;148;Lipt.Mikuláš,Palúdzka,ZŠ;187;2
+437;Lipt.Mikuláš,,ul.Štúrova MsÚ;135;Lipt.Mikuláš,,centrum;162;1
+438;Stankovany,Rojkov,bar;359;Stankovany,Rojkov;74;0,2
+439;Žiar,,Dolinky;240;Žiar,,Juráš;54;1
+439;Žiar,,Dolinky;243;Žiar,,rekr.str.;65;0,2
+440;Lipt.Mikuláš,,Aqua Park;163;Lipt.Trnovec,,rázc.;148;2
+440;Lipt.Mikuláš,,Aqua Park;393;Lipt.Trnovec,,ATC;162;2
+440;Lipt.Mikuláš,,Aqua Park;409;Lipt.Mikuláš,Lipt.Ondrašová,most;120;2
+441;Ružomberok,Biely Potok,Raveň;342;Ružomberok,Biely Potok,pri moste;54;1
+441;Ružomberok,Biely Potok,Raveň;358;Ružomberok,,Vápenka;48;0,2
+442;Ružomberok,Biely Potok,Do Uhliska;339;Ružomberok,Biely Potok,Kovostav;54;1
+442;Ružomberok,Biely Potok,Do Uhliska;342;Ružomberok,Biely Potok,pri moste;62;1
+443;Ružomberok,Biely Potok,Trlenská dolina;338;Ružomberok,Biely Potok,Bohunka;42;0,2
+443;Ružomberok,Biely Potok,Trlenská dolina;339;Ružomberok,Biely Potok,Kovostav;50;1
+443;Ružomberok,Biely Potok,Trlenská dolina;340;Ružomberok,Biely Potok,Podsuchá;176;4
+443;Ružomberok,Biely Potok,Trlenská dolina;342;Ružomberok,Biely Potok,pri moste;135;2
+445;Lisková,,križ.;307;Lipt.Sliače,Nižný Sliač,Smištík;108;2
+445;Lisková,,križ.;316;Lipt.Sliače,,rázc.;61;1
+445;Lisková,,križ.;319;Lisková,,kult.dom;169;1
+445;Lisková,,križ.;343;Ružomberok,,Celulózka;111;2
+446;Banská Bystrica,Jakub,Nový Svet II.;2;Banská Bystrica,,Strieborné nám.;338;5
+446;Banská Bystrica,Jakub,Nový Svet II.;3;Banská Bystrica,Uľanka;144;2
+447;Banská Bystrica,,EUROPA SC;1;Banská Bystrica,,AS;284;2
+448;Lipt.Ján,,hotel Bystrá;127;Lipt.Ján,,zot.Ďumbier;108;1
+448;Lipt.Ján,,hotel Bystrá;449;Lipt.Ján,,Alexandra Wellness Hotel;144;0,2
+449;Lipt.Ján,,Alexandra Wellness Hotel;448;Lipt.Ján,,hotel Bystrá;90;0,2
+450;Ružomberok,,Roveň Poľná;406;Ružomberok,,Supra-vily;135;0,2
+451;Ružomberok,,Roveň Vojenská nem.;353;Ružomberok,,Sihoť ZŠ;54;1
+451;Ružomberok,,Roveň Vojenská nem.;355;Ružomberok,,Supra;162;1
+451;Ružomberok,,Roveň Vojenská nem.;406;Ružomberok,,Supra-vily;189;0,2
+451;Ružomberok,,Roveň Vojenská nem.;450;Ružomberok,,Roveň Poľná;54;0,2
+452;Stankovany,,Strakov;322;Ľubochňa,,Korbelka;54;1
+453;Lipt.Ján,,ul.Starojánska ZŠ;124;Lipt.Ján,,Jednota;54;1
+453;Lipt.Ján,,ul.Starojánska ZŠ;212;Uhorská Ves,,centrum;108;1
+454;Demänovská Dolina,,Wellness hotel Chopok;37;Demänovská Dolina,,Ľadová jaskyňa;62;0,2
+455;Lipt.Mikuláš,,Rachmaninovo nám.;152;Lipt.Mikuláš,,LIDL;113;1
+458;Komjatná,,Pod Stráňou;278;Komjatná,,ZŠ;40;0,2
+459;Ružomberok,,evanjelický kostol;337;Ružomberok,,AS;270;0,2
+461;Smrečany,,bytovky;151;Lipt.Mikuláš,Vitálišovce;158;3
+461;Smrečany,,bytovky;200;Smrečany,,Širica;58;0,2
+463;Lipt.Mikuláš,,St.NICOLAUS;155;Lipt.Mikuláš,,STOP SHOP;121;1
+464;Bešeňová,,Sihoť;17;Bešeňová,,hotel Sumit;54;0,2
+464;Bešeňová,,Sihoť;369;Lipt.Teplá,,Prefa;42;1
+464;Bešeňová,,Sihoť;465;Bešeňová,,bytovka 109;54;0,2
+465;Bešeňová,,bytovka 109;16;Bešeňová,,Jednota;108;0,2
+465;Bešeňová,,bytovka 109;94;Potok,,OcÚ;148;2
+465;Bešeňová,,bytovka 109;128;Lipt.Michal,,Jednota;54;1
+467;Lipt.Mikuláš,,ul.Štefánikova;401;Lipt.Mikuláš,,AS;120;1
+468;Ludrová,,otočka;330;Ludrová,,č.d.155;137;0,2
+469;Lipt.Osada,,pekáreň;295;Lipt.Osada,,Jednota;54;0,2
+469;Lipt.Osada,,pekáreň;301;Lipt.Osada,,č.d.113;94;1
+469;Lipt.Osada,,pekáreň;340;Ružomberok,Biely Potok,Podsuchá;248;5
+337;Ružomberok,,AS;470;Garáž RK;300;2
+470;Garáž RK;337;Ružomberok,,AS;300;2
+401;Lipt.Mikuláš,,AS;471;Garáž LM;180;2
+471;Garáž LM;401;Lipt.Mikuláš,,AS;180;2
+337;Ružomberok,,AS;460;Ružomberok,,Nám. A.Hlinku;420;2
+460;Ružomberok,,Nám. A.Hlinku;337;Ružomberok,,AS;480;2
