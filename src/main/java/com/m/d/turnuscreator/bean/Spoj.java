@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.tuple.Triple;
 
 import java.time.LocalTime;
 
@@ -29,6 +30,6 @@ public class Spoj {
 
     protected int distanceInKm;
 
-//    protected Triple<Long, Long, Long> triangularTimeDurationSec;
+    protected Triple<Long, Long, Long> triangularTimeDurationSec;
 
 }

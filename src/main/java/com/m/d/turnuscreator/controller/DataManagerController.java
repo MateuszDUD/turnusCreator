@@ -1,11 +1,11 @@
-package com.m.d.turnuscreator.view;
+package com.m.d.turnuscreator.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.m.d.turnuscreator.bean.Edge;
 import com.m.d.turnuscreator.bean.Node;
 import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.viewmodel.MainViewModel;
+import com.m.d.turnuscreator.viewmodel.DataManagerViewModel;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import javafx.application.Platform;
@@ -26,6 +26,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Triple;
 
 import java.io.File;
 import java.net.URL;
@@ -35,7 +36,7 @@ import java.util.ResourceBundle;
 import java.util.function.Consumer;
 
 @Slf4j
-public class MainView implements FxmlView<MainViewModel>, Initializable {
+public class DataManagerController implements FxmlView<DataManagerViewModel>, Initializable {
 
     private static String DELETE_BTN_STRING = "-fx-font-size: 17px; -fx-background-color: #D50000; -fx-padding: 0.35em 0.50em;";
 
@@ -68,7 +69,7 @@ public class MainView implements FxmlView<MainViewModel>, Initializable {
     private Stage stage;
 
     @InjectViewModel
-    private MainViewModel viewModel;
+    private DataManagerViewModel viewModel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -312,18 +313,6 @@ public class MainView implements FxmlView<MainViewModel>, Initializable {
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeSecCol = createColumnWithIntComparable("Sekundy",
-                TextFieldTableCell.forTableColumn(),
-                data -> new ReadOnlyStringWrapper(data.getValue().getSeconds() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
-                    @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
-                        edgeStringCellEditEvent.getRowValue().setSeconds(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
-                    }
-                },
-                prefWidth
-        );
-
         TableColumn<Edge, String> edgeMetrCol = createColumnWithIntComparable("Metre",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getMeters() + ""),
@@ -336,9 +325,58 @@ public class MainView implements FxmlView<MainViewModel>, Initializable {
                 prefWidth
         );
 
+        TableColumn<Edge, String> edgeSecCol1 = createColumnWithIntComparable("Sekundy L",
+                TextFieldTableCell.forTableColumn(),
+                data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getLeft() + ""),
+                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                        Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
+                        edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
+                                Triple.of(Integer.parseInt(edgeStringCellEditEvent.getNewValue()),
+                                        oldVal.getMiddle(), oldVal.getRight()
+                                ));
+                    }
+                },
+                prefWidth
+        );
+
+        TableColumn<Edge, String> edgeSecCol2 = createColumnWithIntComparable("Sekundy S",
+                TextFieldTableCell.forTableColumn(),
+                data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getMiddle() + ""),
+                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                        Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
+                        edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
+                                Triple.of(oldVal.getLeft(),
+                                        Integer.parseInt(edgeStringCellEditEvent.getNewValue()), oldVal.getRight()
+                                ));
+                    }
+                },
+                prefWidth
+        );
+
+        TableColumn<Edge, String> edgeSecCol3 = createColumnWithIntComparable("Sekundy P",
+                TextFieldTableCell.forTableColumn(),
+                data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getRight() + ""),
+                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                        Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
+                        edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
+                                Triple.of(oldVal.getLeft(),
+                                        oldVal.getMiddle(), Integer.parseInt(edgeStringCellEditEvent.getNewValue())
+                                ));
+                    }
+                },
+                prefWidth
+        );
+
         TableColumn<Edge, Void> delCol = createDelColumn(edge -> viewModel.removeEdge(edge));
 
-        tableViewInputData.getColumns().addAll(edgeFromIdCol, edgeFromNameCol, edgeToIdCol, edgeToNameCol, edgeSecCol, edgeMetrCol, delCol);
+        tableViewInputData.getColumns().addAll(edgeFromIdCol, edgeFromNameCol, edgeToIdCol, edgeToNameCol, edgeMetrCol,
+                edgeSecCol1, edgeSecCol2, edgeSecCol3, delCol);
         tableViewInputData.setItems(viewModel.getEdgeObservableList());
     }
 

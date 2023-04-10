@@ -10,10 +10,14 @@ module com.m.d.turnuscreator {
     requires rxjavafx;
     requires io.reactivex.rxjava2;
     requires java.sql;
+    requires org.apache.commons.lang3;
+    requires org.apache.pdfbox;
+//    requires artifact.gurobi;
+    requires gurobi;
+    requires java.desktop;
 
     opens com.m.d.turnuscreator to de.saxsys.mvvmfx, javafx.fxml;
-    opens com.m.d.turnuscreator.view to de.saxsys.mvvmfx, javafx.fxml;
+    opens com.m.d.turnuscreator.controller to de.saxsys.mvvmfx, javafx.fxml;
     opens com.m.d.turnuscreator.viewmodel to de.saxsys.mvvmfx, javafx.fxml;
-    //opens com.sun.javafx.scene.control.behavior to com.jfoenix;
     exports com.m.d.turnuscreator;
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableView?>
+<?import com.jfoenix.controls.JFXComboBox?>
+
+<VBox alignment="TOP_CENTER" style="-fx-padding: 20 40 20 40;" spacing="20" stylesheets="@global.css"
+      fx:controller="com.m.d.turnuscreator.controller.DataManagerController"
+      xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+
+    <HBox alignment="CENTER_LEFT" spacing="20" maxHeight="Infinity">
+        <JFXButton maxWidth="Infinity" text="NACITAT DATA" onAction="#onLoadData"/>
+        <Label fx:id="labelInfoDataPathStatic" styleClass="label" text="Cesta:" visible="false"/>
+        <Label fx:id="labelInfoDataPath" styleClass="label" text="" visible="false"/>
+        <Label fx:id="labelInfoConnectionsStatic" styleClass="label" text="Spoje:" visible="false"/>
+        <Label fx:id="labelInfoConnections" styleClass="label" text="" visible="false"/>
+        <Label fx:id="labelInfoStationsStatic" styleClass="label" text="Stanic:" visible="false"/>
+        <Label fx:id="labelInfoStations" styleClass="label" text="" visible="false"/>
+        <Label fx:id="labelInfoEdgesStatic" styleClass="label" text="Usekov:" visible="false"/>
+        <Label fx:id="labelInfoEdges" styleClass="label" text="" visible="false"/>
+    </HBox>
+    <VBox spacing="20" maxWidth="Infinity" maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox spacing="20">
+            <JFXComboBox fx:id="comboBoxInputData" promptText="Data"/>
+            <JFXButton maxWidth="Infinity" text="ULOZIT" onAction="#onSaveData"/>
+            <JFXButton maxWidth="Infinity" text="ZRUSIT" onAction="#onCancelEdit"/>
+            <JFXButton maxWidth="Infinity" text="PRIDAT ZAZNAM" onAction="#addNewData"/>
+        </HBox>
+        <TableView fx:id="tableViewInputData" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+</VBox>
+

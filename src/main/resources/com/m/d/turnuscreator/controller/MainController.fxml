@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+
+<StackPane minWidth="600.0" prefHeight="431.0" prefWidth="661.0" stylesheets="@global.css"
+           xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.m.d.turnuscreator.controller.MainController">
+
+    <JFXTabPane side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <Tab closable="false" text="VSTUPNE DATA">
+            <fx:include fx:id="dataManagerPage" source="DataManagerController.fxml"/>
+        </Tab>
+        <Tab closable="false" text="POCITAJ">
+            <fx:include fx:id="ExpPage" source="ExpController.fxml"/>
+        </Tab>
+        <Tab closable="false" text="Zobrazovac turnusov">
+            <fx:include fx:id="turnusPage" source="TurnusController.fxml"/>
+        </Tab>
+        <Tab closable="false" text="Export PDF">
+            <fx:include fx:id="exportPage" source="ExportPdfController.fxml"/>
+        </Tab>
+    </JFXTabPane>
+</StackPane>

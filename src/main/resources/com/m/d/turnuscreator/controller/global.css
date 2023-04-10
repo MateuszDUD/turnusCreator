@@ -95,16 +95,18 @@
     -fx-background-color: rgb(39, 39, 47);
 }
 
-.table-view .corner {
-    -fx-background-color: transparent;
-}
+/*.table-view .corner {*/
+/*    -fx-background-color: transparent;*/
+/*}*/
 
 .table-view .column-header {
-    -fx-alignment:LEFT;
-    -fx-background-color: transparent;
+    /*-fx-alignment:LEFT;*/
+    /*-fx-background-color: transparent;*/
     -fx-font-size: 25px;
     -fx-text-fill: rgb(30, 185, 128);
     -fx-highlight-fill: rgb(30, 185, 128);
+    -fx-background-color: rgb(39, 39, 47);
+    -fx-table-cell-border-color: rgb(51, 51, 61);
 }
 
 .table-view .column-header-background .filler {
@@ -115,18 +117,27 @@
     -fx-background-color: rgb(39, 39, 47);
 }
 
+.table-row-cell:filled:selected {
+    -fx-background-color: rgb(39, 39, 47);
+    -fx-table-cell-border-color: rgb(51, 51, 61);
+
+}
 .table-row-cell {
-    -fx-cell-border-width: 0 5 5 5;
+    /*-fx-cell-border-width: 0 5 5 5;*/
     /*-fx-border-color: rgb(39, 39, 47);*/
     -fx-background-color: rgb(51, 51, 61);
-    -fx-pref-height: 50px;
+    /*-fx-pref-height: 50px;*/
     -fx-table-cell-border-color: rgb(39, 39, 47);
 }
 
 .table-view .table-cell {
-    -fx-border-color: transparent;
+    /*-fx-border-color: transparent;*/
     -fx-text-fill: white;
-    -fx-font-size: 20px;
+    -fx-font-size: 16px;
+}
+
+.progress-indicator {
+    -fx-progress-color: rgb(30, 185, 128);
 }
 
 .table-view .virtual-flow .scroll-bar:vertical,
