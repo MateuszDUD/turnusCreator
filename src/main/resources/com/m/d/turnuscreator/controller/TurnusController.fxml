@@ -5,10 +5,10 @@
 
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ComboBox?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.HBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <VBox alignment="TOP_CENTER" style="-fx-padding: 20 40 20 40;" spacing="20" stylesheets="@global.css"
       fx:controller="com.m.d.turnuscreator.controller.TurnusController"
       xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
@@ -17,7 +17,16 @@
     <HBox alignment="CENTER_LEFT" spacing="20" maxHeight="Infinity">
         <JFXButton maxWidth="Infinity" text="Pridat turnus" onAction="#onAddTurnus"/>
         <JFXButton maxWidth="Infinity" text="Odstranit turnus" onAction="#onDeleteTurnus"/>
-        <JFXComboBox fx:id="comboBoxTurns" promptText="turnus"/>
+        <JFXComboBox fx:id="comboBoxTurns" promptText="Turnus"/>
+        <Label styleClass="label" text="Pocet turnusov:" />
+        <Label fx:id="labelTurnusCount" styleClass="label" text="" />
+
+        <Label styleClass="label" text="Prazdne km celkovo:" />
+        <Label fx:id="labelEmptyKm" styleClass="label" text=""/>
+        <Label  styleClass="label" text="Prazdne km turnusu:" />
+        <Label fx:id="labelEmptyKmForTurnus" styleClass="label" text=""/>
+        <Label styleClass="label" text="Precestovane km turnusu:" />
+        <Label fx:id="labelTraveledKmForTurnus" styleClass="label" text=""/>
     </HBox>
 
     <TableView fx:id="tableSelectedTurnus" VBox.vgrow="ALWAYS"/>
@@ -26,7 +35,9 @@
         <JFXButton maxWidth="Infinity" text="▼" onAction="#onRemoveSpojFromTurnus"/>
     </HBox>
     <HBox alignment="CENTER_LEFT" spacing="20" maxHeight="Infinity">
-        <Label alignment="CENTER_LEFT" text="Nezaradene spoje"/>
+        <JFXCheckBox fx:id="checkBoxFilterTurnus" text="Filtrovat len validne turnusy"/>
+        <Label  styleClass="label" text="Pocet nezaradenych spojov:" />
+        <Label fx:id="labelUnTurnusCount" styleClass="label" text="" />
     </HBox>
     <TableView fx:id="tableUnselectedTurnus" VBox.vgrow="ALWAYS"/>
 

@@ -1,47 +1,53 @@
 package com.m.d.turnuscreator.viewmodel;
 
-import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.bean.Turnus;
+import com.m.d.turnuscreator.bean.Schedule;
+import com.m.d.turnuscreator.bean.SchedulePlan;
 import com.m.d.turnuscreator.repository.BaseDataRepository;
 import de.saxsys.mvvmfx.SceneLifecycle;
 import de.saxsys.mvvmfx.ViewModel;
-import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import java.awt.print.PrinterException;
 
+import java.awt.*;
 import java.awt.print.PrinterJob;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.time.Duration;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.SneakyThrows;
+import org.apache.commons.lang3.time.DurationFormatUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.printing.PDFPageable;
+import org.apache.pdfbox.pdmodel.font.PDType0Font;
+import org.vandeseer.easytable.TableDrawer;
+import org.vandeseer.easytable.structure.Row;
+import org.vandeseer.easytable.structure.Table;
+import org.vandeseer.easytable.structure.cell.TextCell;
 
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExportPdfViewModel implements ViewModel, SceneLifecycle {
 
     private BaseDataRepository dataRepository = BaseDataRepository.getInstance();
 
     @Getter
-    private ObservableList<Turnus> turnusToExportObservableList = FXCollections.observableArrayList();
+    private ObservableList<SchedulePlan> schedulePlanToExportObservableList = FXCollections.observableArrayList();
 
     @Getter
-    private ObservableList<Turnus> turnusNotToExportObservableList = FXCollections.observableArrayList();
+    private ObservableList<SchedulePlan> schedulePlanNotToExportObservableList = FXCollections.observableArrayList();
 
 
     private void init() {
-        dataRepository.getTurnusObservableList().addListener((ListChangeListener<? super Turnus>) change -> {
-            turnusNotToExportObservableList.clear();
-            turnusNotToExportObservableList.addAll(dataRepository.getTurnusObservableList());
+        dataRepository.getSchedulePlanObservableList().addListener((ListChangeListener<? super SchedulePlan>) change -> {
+            schedulePlanNotToExportObservableList.clear();
+            schedulePlanNotToExportObservableList.addAll(dataRepository.getSchedulePlanObservableList());
         });
     }
 
@@ -57,93 +63,143 @@ public class ExportPdfViewModel implements ViewModel, SceneLifecycle {
     }
 
     public void addToExportAll() {
-        turnusToExportObservableList.addAll(turnusNotToExportObservableList);
-        turnusNotToExportObservableList.clear();
+        schedulePlanToExportObservableList.addAll(schedulePlanNotToExportObservableList);
+        schedulePlanNotToExportObservableList.clear();
     }
 
     public void removeFromExportAll() {
-        turnusNotToExportObservableList.addAll(turnusToExportObservableList);
-        turnusToExportObservableList.clear();
+        schedulePlanNotToExportObservableList.addAll(schedulePlanToExportObservableList);
+        schedulePlanToExportObservableList.clear();
     }
 
-    public void addOneToExport(Turnus turnus) {
-        turnusToExportObservableList.add(turnus);
-        turnusNotToExportObservableList.remove(turnus);
+    public void addOneToExport(SchedulePlan schedulePlan) {
+        schedulePlanToExportObservableList.add(schedulePlan);
+        schedulePlanNotToExportObservableList.remove(schedulePlan);
     }
 
-    public void removeOneFromExport(Turnus turnus) {
-        turnusNotToExportObservableList.add(turnus);
-        turnusToExportObservableList.remove(turnus);
+    public void removeOneFromExport(SchedulePlan schedulePlan) {
+        schedulePlanNotToExportObservableList.add(schedulePlan);
+        schedulePlanToExportObservableList.remove(schedulePlan);
     }
 
     @SneakyThrows
     public void export(String absolutePath) {
-        // Create a new document
-        PDDocument document = new PDDocument();
+        List<SchedulePlan> schedulePlans = schedulePlanToExportObservableList.stream().toList();
 
-        // Create a new page
-        PDPage page = new PDPage();
-        document.addPage(page);
+        try (PDDocument document = new PDDocument()) {
+            PDFont formFont = PDType0Font.load(document, new FileInputStream("arial.ttf"), false);
+            for (int i = 0; i < schedulePlans.size(); i++) {
+                SchedulePlan sheSchedulePlan = schedulePlans.get(i);
 
-        // Create a new content stream for the page
-        PDPageContentStream contentStream = new PDPageContentStream(document, page);
 
-        // Define table parameters
-        int rows = 5;
-        int columns = 3;
-        float rowHeight = 20f;
-        float tableWidth = page.getMediaBox().getWidth() - 72f; // 1 inch margin on each side
-        float tableX = page.getMediaBox().getLowerLeftX() + 36f; // 0.5 inch margin on left
-        float tableY = page.getMediaBox().getUpperRightY() - 72f; // 1 inch margin on top
-        float columnWidth = tableWidth / columns;
+                PDPage page = new PDPage(PDRectangle.A4);
+                document.addPage(page);
 
-        // Define header and data
-        String[] header = {"Name", "Age", "Gender"};
-        String[][] data = {
-                {"John Doe", "35", "Male"},
-                {"Jane Smith", "28", "Female"},
-                {"Bob Johnson", "42", "Male"},
-                {"Sally Brown", "19", "Female"},
-                {"Joe Davis", "56", "Male"}
-        };
+                try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
 
-        // Draw header row
-        contentStream.beginText();
-        contentStream.setFont(PDType1Font.HELVETICA_BOLD, 12);
-        contentStream.newLineAtOffset(tableX, tableY);
-        for (int i = 0; i < header.length; i++) {
-            contentStream.showText(header[i]);
-            contentStream.newLineAtOffset(columnWidth, 0);
-        }
-        contentStream.endText();
+                    // Build the table
+                    Table.TableBuilder myTable = Table.builder()
+                            .addColumnsOfWidth(60, 50, 120, 55, 120, 55, 40, 60)
+                            .padding(8)
+                            .font(formFont)
+                            .fontSize(10)
+                            .addRow(Row.builder()
+                                    .add(TextCell.builder().text("Turnus " + sheSchedulePlan.getId()).colSpan(8).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build())
+                                    .build());
 
-        // Draw data rows
-        contentStream.beginText();
-        contentStream.setFont(PDType1Font.HELVETICA, 12);
-        contentStream.newLineAtOffset(tableX, tableY - rowHeight);
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data[i].length; j++) {
-                contentStream.showText(data[i][j]);
-                contentStream.newLineAtOffset(columnWidth, 0);
+                    myTable.addRow(
+                            Row.builder()
+                                    .add(
+                                            TextCell.builder().text("Linka").borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    )
+                                    .add(
+                                            TextCell.builder().text("Spoj").borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    )
+                                    .add(
+                                            TextCell.builder().text("Začiatok").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    )
+                                    .add(
+                                            TextCell.builder().text("Koniec").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    )
+                                    .add(
+                                            TextCell.builder().text("KM").borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    )
+                                    .add(
+                                            TextCell.builder().text("Čas").borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build()
+                                    ).build()
+                    );
+
+                    List<Schedule> scheduleList = sheSchedulePlan.getScheduleList();
+
+                    for (int j = 0; j < scheduleList.size(); j++) {
+                        Schedule schedule = scheduleList.get(j);
+
+                        myTable.addRow(
+                                Row.builder()
+                                        .add(
+                                                TextCell.builder().text(schedule.getLine()).borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getSpoj()).borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getFromName()).borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getDeparture() + "").borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getToName()).borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getArrival() + "").borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder().text(schedule.getDistanceInKm() + "").borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        )
+                                        .add(
+                                                TextCell.builder()
+                                                        .text(DurationFormatUtils.formatDuration(Duration.between(schedule.getDeparture(), schedule.getArrival()).toMillis(), "HH:mm:ss", true))
+                                                        .borderWidth(1).borderColorLeft(Color.BLACK).build()
+                                        ).build()
+                        );
+                    }
+
+                    myTable.addRow(Row.builder()
+                            .add(TextCell.builder().text("").colSpan(8).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.DARK_GRAY).build())
+                            .build());
+
+                    myTable.addRow(Row.builder()
+                            .add(TextCell.builder().text("Depo").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build())
+                            .add(TextCell.builder().text("Prejdene km").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build())
+                            .add(TextCell.builder().text("Prazdne km").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build())
+                            .add(TextCell.builder().text("Celkove km").colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).backgroundColor(Color.lightGray).build())
+                            .build());
+
+                    myTable.addRow(Row.builder()
+                            .add(TextCell.builder().text(sheSchedulePlan.getDepot().getName()).colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).build())
+                            .add(TextCell.builder().text("" + Math.round(sheSchedulePlan.getTraveledMeters() / 10.0) / 100.0).colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).build())
+                            .add(TextCell.builder().text("" + Math.round(sheSchedulePlan.getEmptyMeters() / 10.0) / 100.0).colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).build())
+                            .add(TextCell.builder().text("" + Math.round((sheSchedulePlan.getEmptyMeters() + sheSchedulePlan.getTraveledMeters()) / 10.0) / 100.0).colSpan(2).borderWidth(1).borderColorLeft(Color.BLACK).build())
+                            .build());
+
+
+                    // Set up the drawer
+                    TableDrawer tableDrawer = TableDrawer.builder()
+                            .contentStream(contentStream)
+                            .startX(20f)
+                            .startY(page.getMediaBox().getUpperRightY() - 20f)
+                            .table(myTable.build())
+                            .build();
+
+                    // And go for it!
+                    tableDrawer.draw();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-            contentStream.newLineAtOffset(-columnWidth * columns, -rowHeight);
+            document.save(absolutePath + "/export_data.pdf");
         }
-        contentStream.endText();
-
-        // Close content stream and save document
-        contentStream.close();
-        document.save("table.pdf");
-
-        // Create a PrinterJob
-        PrinterJob job = PrinterJob.getPrinterJob();
-
-        // Set the PDF document as the printable object
-        job.setPageable(new PDFPageable(document));
-
-        // Print the document
-        job.print();
-
-        // Close the document
-        document.close();
     }
 }

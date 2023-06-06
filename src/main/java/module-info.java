@@ -15,6 +15,7 @@ module com.m.d.turnuscreator {
 //    requires artifact.gurobi;
     requires gurobi;
     requires java.desktop;
+    requires easytable;
 
     opens com.m.d.turnuscreator to de.saxsys.mvvmfx, javafx.fxml;
     opens com.m.d.turnuscreator.controller to de.saxsys.mvvmfx, javafx.fxml;

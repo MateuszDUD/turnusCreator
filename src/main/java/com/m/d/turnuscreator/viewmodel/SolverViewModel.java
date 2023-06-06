@@ -1,9 +1,10 @@
 package com.m.d.turnuscreator.viewmodel;
 
-import com.m.d.turnuscreator.bean.PlaceHolder;
-import com.m.d.turnuscreator.bean.Turnus;
+import com.m.d.turnuscreator.bean.SatisfactionLevel;
+import com.m.d.turnuscreator.bean.SchedulePlan;
+import com.m.d.turnuscreator.bean.Stop;
 import com.m.d.turnuscreator.repository.BaseDataRepository;
-import com.m.d.turnuscreator.service.SomeService;
+import com.m.d.turnuscreator.service.OptimizerService;
 import de.saxsys.mvvmfx.SceneLifecycle;
 import de.saxsys.mvvmfx.ViewModel;
 import javafx.collections.ObservableList;
@@ -13,11 +14,11 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 
 @Slf4j
-public class ExpViewModel implements ViewModel, SceneLifecycle {
+public class SolverViewModel implements ViewModel, SceneLifecycle {
 
     private BaseDataRepository dataRepository = BaseDataRepository.getInstance();
 
-    private SomeService someService = new SomeService();
+    private OptimizerService optimizerService = OptimizerService.getInstance();
 
     @Override
     public void onViewAdded() {
@@ -32,11 +33,11 @@ public class ExpViewModel implements ViewModel, SceneLifecycle {
     public void processWithStep(int m, double step,  Runnable callback) {
 
 
-        Task<ArrayList<PlaceHolder>> task = new Task<ArrayList<PlaceHolder>>() {
+        Task<ArrayList<SatisfactionLevel>> task = new Task<ArrayList<SatisfactionLevel>>() {
             @Override
-            protected ArrayList<PlaceHolder> call() throws Exception {
-                someService.init(m, dataRepository);
-                return someService.processWithSteps(step);
+            protected ArrayList<SatisfactionLevel> call() throws Exception {
+                optimizerService.init(m);
+                return optimizerService.processWithSteps(step);
             }
         };
 
@@ -54,18 +55,19 @@ public class ExpViewModel implements ViewModel, SceneLifecycle {
         new Thread(task).start();
     }
 
-    public void processWithoutSteps(int m, Runnable callback) {
+    public void processWithoutSteps(Stop depo, int m, Runnable callback) {
 
-        Task<ArrayList<Turnus>> task = new Task<ArrayList<Turnus>>() {
+        Task<ArrayList<SchedulePlan>> task = new Task<ArrayList<SchedulePlan>>() {
             @Override
-            protected ArrayList<Turnus> call() throws Exception {
-                someService.init(m, dataRepository);
-                return (ArrayList<Turnus>) someService.processWithoutSteps();
+            protected ArrayList<SchedulePlan> call() throws Exception {
+                optimizerService.init(m);
+                return (ArrayList<SchedulePlan>) optimizerService.processWithoutSteps(depo);
             }
         };
 
         task.setOnSucceeded(workerStateEvent -> {
             log.info("processWithoutSteps() done size: {}", task.getValue().size());
+            task.getValue().forEach(s -> s.setDepot(depo));
             dataRepository.setNewTurnusList(task.getValue());
             callback.run();
         });
@@ -78,20 +80,21 @@ public class ExpViewModel implements ViewModel, SceneLifecycle {
         new Thread(task).start();
     }
 
-    public ObservableList<PlaceHolder> getSignificanceLevelList() {
-        return dataRepository.getSignificanceLevelList();
+    public ObservableList<SatisfactionLevel> getSignificanceLevelList() {
+        return dataRepository.getSatisfactionLevelList();
     }
 
-    public void processAtSignLevel(Double m, Runnable callback) {
-        Task<ArrayList<Turnus>> task = new Task<ArrayList<Turnus>>() {
+    public void processAtSignLevel(Stop depo, Double m, Runnable callback) {
+        Task<ArrayList<SchedulePlan>> task = new Task<ArrayList<SchedulePlan>>() {
             @Override
-            protected ArrayList<Turnus> call() throws Exception {
-                return (ArrayList<Turnus>) someService.processAtSignLevel(m);
+            protected ArrayList<SchedulePlan> call() throws Exception {
+                return (ArrayList<SchedulePlan>) optimizerService.processAtSignLevel(depo, m);
             }
         };
 
         task.setOnSucceeded(workerStateEvent -> {
             log.info("processWithoutSteps() done size: {}", task.getValue().size());
+            task.getValue().forEach(s -> s.setDepot(depo));
             dataRepository.setNewTurnusList(task.getValue());
             callback.run();
         });
@@ -102,5 +105,9 @@ public class ExpViewModel implements ViewModel, SceneLifecycle {
         });
 
         new Thread(task).start();
+    }
+
+    public int getScheduleCount() {
+        return dataRepository.getScheduleList().size();
     }
 }

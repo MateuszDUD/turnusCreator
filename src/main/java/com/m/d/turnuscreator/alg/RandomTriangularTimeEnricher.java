@@ -1,6 +1,6 @@
 package com.m.d.turnuscreator.alg;
 
-import com.m.d.turnuscreator.bean.Spoj;
+import com.m.d.turnuscreator.bean.Schedule;
 import org.apache.commons.lang3.tuple.Triple;
 
 import java.util.HashMap;
@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Random;
 
 
+// debugin purpose
 public class RandomTriangularTimeEnricher {
 
     private Random random;
@@ -21,17 +22,9 @@ public class RandomTriangularTimeEnricher {
         random = new Random(seed);
     }
 
-    public void enrich(List<Spoj> spojList) {
-        spojList.forEach(spoj -> {
-
-            int arrivalSec = spoj.getArrival().toSecondOfDay();
-            int departureSec = spoj.getDeparture().toSecondOfDay();
-
-            long duration = arrivalSec - departureSec;
-            long durationH = duration + random.nextInt(3*60);
-            long durationR = durationH + random.nextInt(10*60);
-
-            spoj.setTriangularTimeDurationSec(Triple.of(duration, durationH, durationR));
+    public void enrich(List<Schedule> scheduleList) {
+        scheduleList.forEach(spoj -> {
+            spoj.setTriangularTimeDurationSec(Triple.of(0L, (long) random.nextInt(2 * 60), (long) random.nextInt(10 * 60)));
         });
     }
 
@@ -45,7 +38,7 @@ public class RandomTriangularTimeEnricher {
 
                 long durationL = to.getValue();
                 long durationH = durationL == 0 ? 0 : durationL + random.nextInt(60);
-                long durationR = durationL == 0 ? 0 : durationH + random.nextInt(5*60);
+                long durationR = durationL == 0 ? 0 : durationH + random.nextInt(10*60);
                 fd.get(from.getKey()).put(to.getKey(),Triple.of(durationL, durationH, durationR));
             });
         });

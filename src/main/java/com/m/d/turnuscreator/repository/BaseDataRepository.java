@@ -3,12 +3,15 @@ package com.m.d.turnuscreator.repository;
 import com.m.d.turnuscreator.bean.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -17,17 +20,20 @@ public class BaseDataRepository {
     private final static String NODES_P = "\\vrcholy.csv";
     private final static String EDGES_P = "\\hrany.csv";
     private final static String SPOJE_P = "\\spoje.csv";
+    private final static String SCHEDULE_PLAN_P = "\\turnus.csv";
 
     private String path;
 
-    private ArrayList<Edge> edgeList;
-    private ArrayList<Node> nodeList;
-    private ArrayList<Spoj> spojList;
+    private ArrayList<Route> routeList;
+    private ArrayList<Stop> stopList;
+    private ArrayList<Schedule> scheduleList;
 
-    ObservableList<Turnus> turnusObservableList = FXCollections.observableArrayList();
-    ObservableList<Spoj> unassignedSpojObservableList = FXCollections.observableArrayList();
+    ObservableList<Stop> stopObservableList = FXCollections.observableArrayList();
 
-    ObservableList<PlaceHolder> significanceLevelList = FXCollections.observableArrayList();
+    ObservableList<SchedulePlan> schedulePlanObservableList = FXCollections.observableArrayList();
+    ObservableList<Schedule> unassignedScheduleObservableList = FXCollections.observableArrayList();
+
+    ObservableList<SatisfactionLevel> satisfactionLevelList = FXCollections.observableArrayList();
 
     private int maxIdEdge = 0;
     private int maxIdNode = 0;
@@ -42,27 +48,40 @@ public class BaseDataRepository {
     public boolean loadDataFrom(String absolutePath) {
         try {
             this.path = absolutePath;
-            nodeList = (ArrayList<Node>) DataReader.readNodes(absolutePath + NODES_P);
-            edgeList = (ArrayList<Edge>) DataReader.readEdges(absolutePath + EDGES_P);
-            spojList = (ArrayList<Spoj>) DataReader.readSpoje(absolutePath + SPOJE_P);
+            stopList = (ArrayList<Stop>) DataReader.readNodes(absolutePath + NODES_P);
+            routeList = (ArrayList<Route>) DataReader.readEdges(absolutePath + EDGES_P);
+            scheduleList = (ArrayList<Schedule>) DataReader.readShedules(absolutePath + SPOJE_P);
 
-            maxIdNode = nodeList.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
-            maxIdConnection = spojList.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
+            stopObservableList.clear();
+            stopObservableList.setAll(stopList);
+
+            maxIdNode = stopList.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
+            maxIdConnection = scheduleList.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
 //            maxIdEdge = edgeList.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
+
+
+            Task<ArrayList<SchedulePlan>> task = new Task<ArrayList<SchedulePlan>>() {
+                @Override
+                protected ArrayList<SchedulePlan> call() throws Exception {
+                    return DataReader.readSchedulesPlan(absolutePath + SCHEDULE_PLAN_P, stopList, scheduleList);
+                }
+            };
+
+            task.setOnSucceeded(workerStateEvent -> {
+                log.info("loadDataFrom() done size: {}", task.getValue().size());
+                setNewTurnusList(task.getValue());
+            });
+
+            task.setOnFailed(workerStateEvent -> {
+                log.info("loadDataFrom() failed");
+            });
+
+            new Thread(task).start();
 
         } catch (IOException e) {
             return false;
         }
 
-
-        //todo: testing delete
-
-        for (int i = 0; i < 5; i++) {
-            turnusObservableList.add(Turnus.builder().id(i).spojList(spojList.subList(i * 5, (i + 1) * 5)).build());
-        }
-
-        unassignedSpojObservableList.addAll(spojList.subList(5 * 6, spojList.size()));
-        // <-
         return true;
     }
 
@@ -74,30 +93,36 @@ public class BaseDataRepository {
         return ++maxIdConnection;
     }
 
-    public void saveData(List<Node> nodes, List<Edge> edges, List<Spoj> spojList) {
-        this.nodeList.clear();
-        this.nodeList.addAll(nodes);
+    public void saveData(List<Stop> stops, List<Route> routes, List<Schedule> scheduleList) {
+        this.stopList.clear();
+        this.stopList.addAll(stops);
+        this.stopObservableList.clear();
+        this.stopObservableList.addAll(stops);
 
-        this.edgeList.clear();
-        this.edgeList.addAll(edges);
+        this.routeList.clear();
+        this.routeList.addAll(routes);
 
-        this.spojList.clear();
-        this.spojList.addAll(spojList);
+        this.scheduleList.clear();
+        this.scheduleList.addAll(scheduleList);
 
-        DataReader.saveNodes(path + NODES_P, nodeList);
-        DataReader.saveEdges(path + EDGES_P, edgeList);
-        DataReader.saveConections(path + SPOJE_P, this.spojList);
+        DataReader.saveNodes(path + NODES_P, stopList);
+        DataReader.saveEdges(path + EDGES_P, routeList);
+        DataReader.saveConections(path + SPOJE_P, this.scheduleList);
+
+        if (this.schedulePlanObservableList != null && !this.schedulePlanObservableList.isEmpty()) {
+            DataReader.saveShedulePlans(path + SCHEDULE_PLAN_P, schedulePlanObservableList);
+        }
     }
 
-    public void setNewTurnusList(ArrayList<Turnus> value) {
-        this.turnusObservableList.clear();
-        this.turnusObservableList.addAll(value);
+    public void setNewTurnusList(ArrayList<SchedulePlan> value) {
+        this.schedulePlanObservableList.clear();
+        this.schedulePlanObservableList.addAll(value);
 
-        this.unassignedSpojObservableList.clear();
+        this.unassignedScheduleObservableList.clear();
     }
 
-    public void setNewSignificanceLevel(ArrayList<PlaceHolder> value) {
-        this.significanceLevelList.clear();
-        this.significanceLevelList.addAll(value);
+    public void setNewSignificanceLevel(ArrayList<SatisfactionLevel> value) {
+        this.satisfactionLevelList.clear();
+        this.satisfactionLevelList.addAll(value);
     }
 }

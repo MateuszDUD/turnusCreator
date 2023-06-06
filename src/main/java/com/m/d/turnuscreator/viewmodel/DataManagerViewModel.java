@@ -1,8 +1,8 @@
 package com.m.d.turnuscreator.viewmodel;
 
-import com.m.d.turnuscreator.bean.Edge;
-import com.m.d.turnuscreator.bean.Node;
-import com.m.d.turnuscreator.bean.Spoj;
+import com.m.d.turnuscreator.bean.Route;
+import com.m.d.turnuscreator.bean.Stop;
+import com.m.d.turnuscreator.bean.Schedule;
 import com.m.d.turnuscreator.repository.BaseDataRepository;
 import de.saxsys.mvvmfx.SceneLifecycle;
 import de.saxsys.mvvmfx.ViewModel;
@@ -31,11 +31,11 @@ public class DataManagerViewModel implements ViewModel, SceneLifecycle {
     private final StringProperty textInfoConnectionsCount = new SimpleStringProperty("");
 
     @Getter
-    ObservableList<Node> nodeObservableList = FXCollections.observableArrayList();
+    ObservableList<Stop> stopObservableList = FXCollections.observableArrayList();
     @Getter
-    ObservableList<Spoj> spojObservableList = FXCollections.observableArrayList();
+    ObservableList<Schedule> scheduleObservableList = FXCollections.observableArrayList();
     @Getter
-    ObservableList<Edge> edgeObservableList = FXCollections.observableArrayList();
+    ObservableList<Route> routeObservableList = FXCollections.observableArrayList();
 
     public DataManagerViewModel() {
     }
@@ -51,12 +51,9 @@ public class DataManagerViewModel implements ViewModel, SceneLifecycle {
 
     public boolean loadDataFromPath(String absolutePath) {
         if (baseDataRepository.loadDataFrom(absolutePath)) {
-
             textInfoDataPath.setValue(absolutePath);
-            textInfoStationsCount.setValue(baseDataRepository.getNodeList().size() + "");
-            textInfoEdgesCount.setValue("" + baseDataRepository.getEdgeList().size());
-            textInfoConnectionsCount.setValue("" + baseDataRepository.getSpojList().size());
             setObservables();
+            setCounters();
 
             return true;
         } else {
@@ -64,54 +61,65 @@ public class DataManagerViewModel implements ViewModel, SceneLifecycle {
         }
     }
 
+    private void setCounters() {
+        textInfoStationsCount.setValue(stopObservableList.size() + "");
+        textInfoEdgesCount.setValue("" + routeObservableList.size());
+        textInfoConnectionsCount.setValue("" + scheduleObservableList.size());
+    }
+
     public void reloadData() {
         setObservables();
     }
 
     private void setObservables() {
-        nodeObservableList.setAll(baseDataRepository.getNodeList());
-        spojObservableList.setAll(baseDataRepository.getSpojList());
-        edgeObservableList.setAll(baseDataRepository.getEdgeList());
+        stopObservableList.setAll(baseDataRepository.getStopList());
+        scheduleObservableList.setAll(baseDataRepository.getScheduleList());
+        routeObservableList.setAll(baseDataRepository.getRouteList());
     }
 
     public void test() {
-        baseDataRepository.getNodeList().forEach(a -> {
+        baseDataRepository.getStopList().forEach(a -> {
             log.info(a.getName() + " " + a.getId());
         });
     }
 
-    public void removeNode(Node data) {
-        nodeObservableList.remove(data);
+    public void removeNode(Stop data) {
+        stopObservableList.remove(data);
+        setCounters();
     }
 
-    public void removeConnection(Spoj data) {
-        spojObservableList.remove(data);
+    public void removeConnection(Schedule data) {
+        scheduleObservableList.remove(data);
+        setCounters();
     }
 
-    public void removeEdge(Edge data) {
-        edgeObservableList.remove(data);
+    public void removeEdge(Route data) {
+        routeObservableList.remove(data);
+        setCounters();
     }
 
     public void createNewNode() {
-        nodeObservableList.add(Node.builder().id(baseDataRepository.getNewNodeId())
+        stopObservableList.add(Stop.builder().id(baseDataRepository.getNewNodeId())
                 .name("")
                 .build());
+        setCounters();
     }
 
     public void createNewEdge() {
-        edgeObservableList.add(Edge.builder()
+        routeObservableList.add(Route.builder()
                 .fromId(1)
                 .fromName("-")
                 .toId(2)
                 .toName("-")
                 .seconds(0)
                 .meters(0)
-                        .secondsTriangular(Triple.of(0, 0 ,0))
+                .secondsTriangular(Triple.of(0, 0, 0))
                 .build());
+        setCounters();
     }
 
     public void createNewConnection() {
-        spojObservableList.add(Spoj.builder()
+        scheduleObservableList.add(Schedule.builder()
                 .id(baseDataRepository.getNewConnectionId())
                 .line("-1")
                 .spoj("-1")
@@ -123,11 +131,12 @@ public class DataManagerViewModel implements ViewModel, SceneLifecycle {
                 .arrival(LocalTime.of(0, 0))
                 .distanceInKm(-1)
                 .build());
+        setCounters();
     }
 
     public void saveData() {
-        baseDataRepository.saveData(this.nodeObservableList.stream().toList(),
-                this.edgeObservableList.stream().toList(),
-                this.spojObservableList.stream().toList());
+        baseDataRepository.saveData(this.stopObservableList.stream().toList(),
+                this.routeObservableList.stream().toList(),
+                this.scheduleObservableList.stream().toList());
     }
 }

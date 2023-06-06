@@ -6,7 +6,7 @@ import org.apache.commons.lang3.tuple.Triple;
 
 @Data
 @Builder
-public class Edge {
+public class Route {
     private int fromId;
     private String fromName;
 

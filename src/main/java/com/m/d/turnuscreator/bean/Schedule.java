@@ -12,7 +12,7 @@ import java.time.LocalTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Spoj {
+public class Schedule {
 
     protected int id;
     // Linka
@@ -32,4 +32,17 @@ public class Spoj {
 
     protected Triple<Long, Long, Long> triangularTimeDurationSec;
 
+    public long getLeftDuration() {
+        int arrivalSec = this.getArrival().toSecondOfDay();
+        int departureSec = this.getDeparture().toSecondOfDay();
+        return arrivalSec - departureSec;
+    }
+
+    public long getMidDuration() {
+        return getLeftDuration() + triangularTimeDurationSec.getMiddle();
+    }
+
+    public long getRightDuration() {
+        return getLeftDuration() + triangularTimeDurationSec.getRight();
+    }
 }

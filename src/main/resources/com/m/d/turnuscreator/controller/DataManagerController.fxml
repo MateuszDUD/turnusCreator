@@ -18,7 +18,7 @@
         <Label fx:id="labelInfoDataPath" styleClass="label" text="" visible="false"/>
         <Label fx:id="labelInfoConnectionsStatic" styleClass="label" text="Spoje:" visible="false"/>
         <Label fx:id="labelInfoConnections" styleClass="label" text="" visible="false"/>
-        <Label fx:id="labelInfoStationsStatic" styleClass="label" text="Stanic:" visible="false"/>
+        <Label fx:id="labelInfoStationsStatic" styleClass="label" text="Zastavky:" visible="false"/>
         <Label fx:id="labelInfoStations" styleClass="label" text="" visible="false"/>
         <Label fx:id="labelInfoEdgesStatic" styleClass="label" text="Usekov:" visible="false"/>
         <Label fx:id="labelInfoEdges" styleClass="label" text="" visible="false"/>

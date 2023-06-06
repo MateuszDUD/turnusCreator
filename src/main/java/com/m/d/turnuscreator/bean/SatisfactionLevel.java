@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Builder
 @Data
-public class PlaceHolder {
-    private double significanceLevel;
+public class SatisfactionLevel {
+    private double satisfactionLevelValue;
     private int objectValue;
 }

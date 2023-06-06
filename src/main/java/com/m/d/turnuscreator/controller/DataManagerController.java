@@ -2,9 +2,10 @@ package com.m.d.turnuscreator.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
-import com.m.d.turnuscreator.bean.Edge;
-import com.m.d.turnuscreator.bean.Node;
-import com.m.d.turnuscreator.bean.Spoj;
+import com.m.d.turnuscreator.bean.Route;
+import com.m.d.turnuscreator.bean.SchedulePlan;
+import com.m.d.turnuscreator.bean.Stop;
+import com.m.d.turnuscreator.bean.Schedule;
 import com.m.d.turnuscreator.viewmodel.DataManagerViewModel;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
@@ -13,6 +14,7 @@ import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.tuple.Triple;
 import java.io.File;
 import java.net.URL;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
@@ -143,118 +146,153 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
                         createStationsTable();
                         break;
                     case BOX_SPOJE:
-                        int prefWidth = 11;
+                        int prefWidth = 13;
 
-                        TableColumn<Spoj, String> idCol = createColumnWithIntComparable("ID",
+                        TableColumn<Schedule, String> idCol = createColumnWithIntComparable("ID",
                                 null,
                                 data -> new ReadOnlyStringWrapper(data.getValue().getId() + ""),
                                 null,
                                 prefWidth);
 
-                        TableColumn<Spoj, String> idLine = createColumnWithIntComparable("Linka",
+                        TableColumn<Schedule, String> idLine = createColumnWithIntComparable("Linka",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getLine() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setLine(edgeStringCellEditEvent.getNewValue());
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> idSpoj = createColumnWithIntComparable("Spoj",
+                        TableColumn<Schedule, String> idSpoj = createColumnWithIntComparable("Spoj",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getSpoj() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setSpoj(edgeStringCellEditEvent.getNewValue());
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> idFromCol = createColumnWithIntComparable("Zastavka od",
+                        TableColumn<Schedule, String> idFromCol = createColumnWithIntComparable("Zastavka od",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getFromId() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setFromId(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> fromCol = createColumn("Zastavka od",
+                        TableColumn<Schedule, String> fromCol = createColumn("Zastavka od",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getFromName() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setFromName(edgeStringCellEditEvent.getNewValue());
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> depCol = createColumn("Odchod",
+                        TableColumn<Schedule, String> depCol = createColumn("Odchod",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getDeparture() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setDeparture(LocalTime.parse(edgeStringCellEditEvent.getNewValue()));
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> idToCol = createColumnWithIntComparable("Zastavka do",
+                        TableColumn<Schedule, String> idToCol = createColumnWithIntComparable("Zastavka do",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getToId() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setFromId(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> toCol = createColumn("Zastavka do",
+                        TableColumn<Schedule, String> toCol = createColumn("Zastavka do",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getToName() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setFromName(edgeStringCellEditEvent.getNewValue());
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> arrCol = createColumn("Prichod",
+                        TableColumn<Schedule, String> arrCol = createColumn("Prichod",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getArrival() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setArrival(LocalTime.parse(edgeStringCellEditEvent.getNewValue()));
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, String> kmCol = createColumnWithIntComparable("km",
+                        TableColumn<Schedule, String> kmCol = createColumnWithIntComparable("km",
                                 TextFieldTableCell.forTableColumn(),
                                 data -> new ReadOnlyStringWrapper(data.getValue().getDistanceInKm() + ""),
-                                new EventHandler<TableColumn.CellEditEvent<Spoj, String>>() {
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
                                     @Override
-                                    public void handle(TableColumn.CellEditEvent<Spoj, String> edgeStringCellEditEvent) {
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
                                         edgeStringCellEditEvent.getRowValue().setDistanceInKm(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                                     }
                                 },
                                 prefWidth);
 
-                        TableColumn<Spoj, Void> delCol = createDelColumn(spoj -> viewModel.removeConnection(spoj));
+                        TableColumn<Schedule, String> delayColS = createColumnWithIntComparable("meskanie sec #1",
+                                TextFieldTableCell.forTableColumn(),
+                                data -> new ReadOnlyStringWrapper(data.getValue().getTriangularTimeDurationSec().getMiddle() + ""),
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
+                                    @Override
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
+
+                                        Triple<Long, Long, Long> old = edgeStringCellEditEvent.getRowValue().getTriangularTimeDurationSec();
+
+                                        edgeStringCellEditEvent.getRowValue().setTriangularTimeDurationSec(
+                                                Triple.of(old.getLeft(),
+                                                        Long.parseLong(edgeStringCellEditEvent.getNewValue()),
+                                                        old.getRight())
+                                        );
+                                    }
+                                },
+                                prefWidth);
+
+                        TableColumn<Schedule, String> delayColR = createColumnWithIntComparable("meskanie sec #2",
+                                TextFieldTableCell.forTableColumn(),
+                                data -> new ReadOnlyStringWrapper(data.getValue().getTriangularTimeDurationSec().getRight() + ""),
+                                new EventHandler<TableColumn.CellEditEvent<Schedule, String>>() {
+                                    @Override
+                                    public void handle(TableColumn.CellEditEvent<Schedule, String> edgeStringCellEditEvent) {
+                                        Triple<Long, Long, Long> old = edgeStringCellEditEvent.getRowValue().getTriangularTimeDurationSec();
+
+                                        edgeStringCellEditEvent.getRowValue().setTriangularTimeDurationSec(
+                                                Triple.of(old.getLeft(),
+                                                        old.getMiddle(),
+                                                        Long.parseLong(edgeStringCellEditEvent.getNewValue()))
+                                        );
+                                    }
+                                },
+                                prefWidth);
+
+                        TableColumn<Schedule, Void> delCol = createDelColumn(spoj -> viewModel.removeConnection(spoj));
 
                         tableViewInputData.getColumns().addAll(idCol, idLine, idSpoj, idFromCol, fromCol, depCol,
-                                idToCol, toCol, arrCol,kmCol, delCol);
-                        tableViewInputData.setItems(viewModel.getSpojObservableList());
+                                idToCol, toCol, arrCol, kmCol, delayColS, delayColR, delCol);
+                        tableViewInputData.setItems(viewModel.getScheduleObservableList());
                         break;
                 }
             }
@@ -265,73 +303,75 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
         int prefWidth;
         prefWidth = 7;
 
-        TableColumn<Edge, String> edgeFromIdCol = createColumnWithIntComparable("Zastavka od",
+        TableColumn<Route, String> edgeFromIdCol = createColumnWithIntComparable("Zastavka od",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getFromId() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         edgeStringCellEditEvent.getRowValue().setFromId(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeFromNameCol = createColumn("Zastavka od",
+        TableColumn<Route, String> edgeFromNameCol = createColumn("Zastavka od",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getFromName() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         edgeStringCellEditEvent.getRowValue().setFromName(edgeStringCellEditEvent.getNewValue());
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeToIdCol = createColumnWithIntComparable("Zastavka do",
+        TableColumn<Route, String> edgeToIdCol = createColumnWithIntComparable("Zastavka do",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getToId() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         edgeStringCellEditEvent.getRowValue().setToId(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeToNameCol = createColumn("Zastavka do",
+        TableColumn<Route, String> edgeToNameCol = createColumn("Zastavka do",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getToName() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         edgeStringCellEditEvent.getRowValue().setToName(edgeStringCellEditEvent.getNewValue());
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeMetrCol = createColumnWithIntComparable("Metre",
+        TableColumn<Route, String> edgeMetrCol = createColumnWithIntComparable("Metre",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getMeters() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         edgeStringCellEditEvent.getRowValue().setMeters(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeSecCol1 = createColumnWithIntComparable("Sekundy L",
+        TableColumn<Route, String> edgeSecCol1 = createColumnWithIntComparable("Sekundy L",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getLeft() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
+                        edgeStringCellEditEvent.getRowValue().setSeconds(Integer.parseInt(edgeStringCellEditEvent.getNewValue()));
+
                         edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
                                 Triple.of(Integer.parseInt(edgeStringCellEditEvent.getNewValue()),
                                         oldVal.getMiddle(), oldVal.getRight()
@@ -341,12 +381,12 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeSecCol2 = createColumnWithIntComparable("Sekundy S",
+        TableColumn<Route, String> edgeSecCol2 = createColumnWithIntComparable("Sekundy S",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getMiddle() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
                         edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
                                 Triple.of(oldVal.getLeft(),
@@ -357,12 +397,12 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
                 prefWidth
         );
 
-        TableColumn<Edge, String> edgeSecCol3 = createColumnWithIntComparable("Sekundy P",
+        TableColumn<Route, String> edgeSecCol3 = createColumnWithIntComparable("Sekundy P",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getSecondsTriangular().getRight() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Edge, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Route, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Edge, String> edgeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Route, String> edgeStringCellEditEvent) {
                         Triple<Integer, Integer, Integer> oldVal = edgeStringCellEditEvent.getRowValue().getSecondsTriangular();
                         edgeStringCellEditEvent.getRowValue().setSecondsTriangular(
                                 Triple.of(oldVal.getLeft(),
@@ -373,39 +413,39 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
                 prefWidth
         );
 
-        TableColumn<Edge, Void> delCol = createDelColumn(edge -> viewModel.removeEdge(edge));
+        TableColumn<Route, Void> delCol = createDelColumn(edge -> viewModel.removeEdge(edge));
 
         tableViewInputData.getColumns().addAll(edgeFromIdCol, edgeFromNameCol, edgeToIdCol, edgeToNameCol, edgeMetrCol,
                 edgeSecCol1, edgeSecCol2, edgeSecCol3, delCol);
-        tableViewInputData.setItems(viewModel.getEdgeObservableList());
+        tableViewInputData.setItems(viewModel.getRouteObservableList());
     }
 
     private void createStationsTable() {
         int prefWidth;
         prefWidth = 3;
 
-        TableColumn<Node, String> idCol = createColumnWithIntComparable("ID",
+        TableColumn<Stop, String> idCol = createColumnWithIntComparable("ID",
                 null,
                 data -> new ReadOnlyStringWrapper(data.getValue().getId() + ""),
                 null,
                 prefWidth);
 
-        TableColumn<Node, String> nameCol = createColumn("Zastavka",
+        TableColumn<Stop, String> nameCol = createColumn("Zastavka",
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().getName() + ""),
-                new EventHandler<TableColumn.CellEditEvent<Node, String>>() {
+                new EventHandler<TableColumn.CellEditEvent<Stop, String>>() {
                     @Override
-                    public void handle(TableColumn.CellEditEvent<Node, String> nodeStringCellEditEvent) {
+                    public void handle(TableColumn.CellEditEvent<Stop, String> nodeStringCellEditEvent) {
                         nodeStringCellEditEvent.getRowValue().setName(nodeStringCellEditEvent.getNewValue());
                     }
                 },
                 prefWidth
         );
 
-        TableColumn<Node, Void> delCol1 = createDelColumn(node -> viewModel.removeNode(node));
+        TableColumn<Stop, Void> delCol1 = createDelColumn(node -> viewModel.removeNode(node));
 
         tableViewInputData.getColumns().addAll(idCol, nameCol, delCol1);
-        tableViewInputData.setItems(viewModel.getNodeObservableList());
+        tableViewInputData.setItems(viewModel.getStopObservableList());
     }
 
     private <S> TableColumn<S, Void> createDelColumn(Consumer<S> fun) {
@@ -457,6 +497,7 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
         File path = directoryChooser.showDialog(stage);
         if (path != null) {
             log.info("Load data from {}", path.getAbsolutePath());
+
             if (viewModel.loadDataFromPath(path.getAbsolutePath())) {
                 labelInfoDataPath.setVisible(true);
                 labelInfoConnections.setVisible(true);
@@ -468,6 +509,7 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
                 labelInfoDataPathStatic.setVisible(true);
                 labelInfoConnectionsStatic.setVisible(true);
             }
+
         }
     }
 
@@ -477,15 +519,15 @@ public class DataManagerController implements FxmlView<DataManagerViewModel>, In
             switch (selectedItem) {
                 case BOX_ZASTAVKY:
                     viewModel.createNewNode();
-                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getNodeObservableList().size() - 1));
+                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getStopObservableList().size() - 1));
                     break;
                 case BOX_SPOJE:
                     viewModel.createNewConnection();
-                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getSpojObservableList().size() - 1));
+                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getScheduleObservableList().size() - 1));
                     break;
                 case BOX_USEKY:
                     viewModel.createNewEdge();
-                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getEdgeObservableList().size() - 1));
+                    Platform.runLater(() -> tableViewInputData.scrollTo(viewModel.getRouteObservableList().size() - 1));
                     break;
             }
         }

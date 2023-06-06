@@ -2,10 +2,12 @@ package com.m.d.turnuscreator.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import com.m.d.turnuscreator.bean.PlaceHolder;
-import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.viewmodel.ExpViewModel;
+import com.m.d.turnuscreator.bean.SatisfactionLevel;
+import com.m.d.turnuscreator.bean.Stop;
+import com.m.d.turnuscreator.repository.BaseDataRepository;
+import com.m.d.turnuscreator.viewmodel.SolverViewModel;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import javafx.beans.property.ReadOnlyStringWrapper;
@@ -23,10 +25,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
 @Slf4j
-public class ExpController implements FxmlView<ExpViewModel>, Initializable {
+public class SolverController implements FxmlView<SolverViewModel>, Initializable {
     @FXML
     public JFXTextField aaa;
     @FXML
@@ -46,9 +47,13 @@ public class ExpController implements FxmlView<ExpViewModel>, Initializable {
     public JFXTextField textSignLevel;
     @FXML
     public ProgressIndicator progressIndicatorProcessing2;
+    @FXML
+    public JFXComboBox comboBoxDepo;
 
     @InjectViewModel
-    private ExpViewModel viewModel;
+    private SolverViewModel viewModel;
+
+    private BaseDataRepository repository = BaseDataRepository.getInstance();
 
     private boolean processBySteps = false;
 
@@ -60,6 +65,7 @@ public class ExpController implements FxmlView<ExpViewModel>, Initializable {
             textStep.setVisible(newVal);
         });
 
+        comboBoxDepo.setItems(repository.getStopObservableList());
     }
 
     public void onSpustit(ActionEvent actionEvent) {
@@ -72,6 +78,16 @@ public class ExpController implements FxmlView<ExpViewModel>, Initializable {
             log.error("error", e);
         }
 
+        Object o = comboBoxDepo.getSelectionModel().getSelectedItem();
+        Stop depo = null;
+        if (o instanceof Stop) {
+            depo = (Stop) o;
+        }
+
+        if (depo == null) {
+            log.warn("no depo selected");
+            return;
+        }
 
         table.setVisible(false);
         progressIndicatorProcessing.setVisible(true);
@@ -86,31 +102,33 @@ public class ExpController implements FxmlView<ExpViewModel>, Initializable {
                 setSignificanceLevelTable();
             });
         } else {
-            viewModel.processWithoutSteps(m, () -> this.progressIndicatorProcessing.setVisible(false));
+            viewModel.processWithoutSteps(depo, m, () -> this.progressIndicatorProcessing.setVisible(false));
         }
     }
 
     private void setSignificanceLevelTable() {
-        ObservableList<PlaceHolder> significanceLevelList = viewModel.getSignificanceLevelList();
+        ObservableList<SatisfactionLevel> satisfactionLevelList = viewModel.getSignificanceLevelList();
 
         table.getColumns().clear();
 
-        int prefWidth = significanceLevelList.size();
+        int prefWidth = satisfactionLevelList.size();
 
-        for(int i = 0; i < significanceLevelList.size(); i++) {
+        int schedulesCount = viewModel.getScheduleCount();
+
+        for (int i = 0; i < satisfactionLevelList.size(); i++) {
             int finalI = i;
-            TableColumn<List<PlaceHolder>, String> col = HelperFunctions.createColumnWithIntComparable( significanceLevelList.get(i).getSignificanceLevel() + "",
-                        TextFieldTableCell.forTableColumn(),
-                        data -> new ReadOnlyStringWrapper(significanceLevelList.get(finalI).getObjectValue() + ""),
-                        null,
-                        prefWidth, table);
+            TableColumn<List<SatisfactionLevel>, String> col = HelperFunctions.createColumnWithIntComparable(satisfactionLevelList.get(i).getSatisfactionLevelValue() + "",
+                    TextFieldTableCell.forTableColumn(),
+                    data -> new ReadOnlyStringWrapper(schedulesCount - satisfactionLevelList.get(finalI).getObjectValue() + ""),
+                    null,
+                    prefWidth, table);
 
-                table.getColumns().add(col);
+            table.getColumns().add(col);
 
         }
 
-        ObservableList<List<PlaceHolder>> olist = FXCollections.observableArrayList();
-        olist.add(significanceLevelList);
+        ObservableList<List<SatisfactionLevel>> olist = FXCollections.observableArrayList();
+        olist.add(satisfactionLevelList);
 
         table.setItems(olist);
     }
@@ -118,12 +136,18 @@ public class ExpController implements FxmlView<ExpViewModel>, Initializable {
     public void onRunAtSignLevel(ActionEvent actionEvent) {
         Double m = 0.0;
         try {
-            m = Double.parseDouble(btnRunAtSignLevel.getText());
+            m = Double.parseDouble(textSignLevel.getText());
         } catch (Exception e) {
             log.error("error", e);
         }
 
-        this.progressIndicatorProcessing2.setVisible(true);
-        viewModel.processAtSignLevel(m, () -> this.progressIndicatorProcessing2.setVisible(false));
+        Object o = comboBoxDepo.getSelectionModel().getSelectedItem();
+
+        if (o instanceof Stop) {
+            Stop depo = (Stop) o;
+
+            this.progressIndicatorProcessing2.setVisible(true);
+            viewModel.processAtSignLevel(depo, m, () -> this.progressIndicatorProcessing2.setVisible(false));
+        }
     }
 }

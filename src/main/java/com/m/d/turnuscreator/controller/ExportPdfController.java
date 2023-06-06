@@ -1,10 +1,7 @@
 package com.m.d.turnuscreator.controller;
 
-import com.jfoenix.controls.JFXComboBox;
-import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.bean.Turnus;
+import com.m.d.turnuscreator.bean.SchedulePlan;
 import com.m.d.turnuscreator.viewmodel.ExportPdfViewModel;
-import com.m.d.turnuscreator.viewmodel.TurnusViewModel;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import javafx.beans.property.ReadOnlyStringWrapper;
@@ -40,12 +37,12 @@ public class ExportPdfController implements FxmlView<ExportPdfViewModel>, Initia
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        initTable(tableNotToExport, viewModel.getTurnusNotToExportObservableList());
-        initTable(tableToExport, viewModel.getTurnusToExportObservableList());
+        initTable(tableNotToExport, viewModel.getSchedulePlanNotToExportObservableList(), "Turnusy");
+        initTable(tableToExport, viewModel.getSchedulePlanToExportObservableList(), "Turnusy pre export");
     }
 
-    private void initTable(TableView tableView, ObservableList<Turnus> observableList) {
-        TableColumn<Turnus, String> col = HelperFunctions.createColumn("Odchod",
+    private void initTable(TableView tableView, ObservableList<SchedulePlan> observableList, String name) {
+        TableColumn<SchedulePlan, String> col = HelperFunctions.createColumn(name,
                 TextFieldTableCell.forTableColumn(),
                 data -> new ReadOnlyStringWrapper(data.getValue().toString()),
                 null,
@@ -61,9 +58,9 @@ public class ExportPdfController implements FxmlView<ExportPdfViewModel>, Initia
 
     public void onAddOne(ActionEvent actionEvent) {
         Object obj = tableNotToExport.getSelectionModel().getSelectedItem();
-        if (obj instanceof Turnus) {
-            Turnus turnus = (Turnus) obj;
-            viewModel.addOneToExport(turnus);
+        if (obj instanceof SchedulePlan) {
+            SchedulePlan schedulePlan = (SchedulePlan) obj;
+            viewModel.addOneToExport(schedulePlan);
         }
     }
 
@@ -78,9 +75,9 @@ public class ExportPdfController implements FxmlView<ExportPdfViewModel>, Initia
 
     public void oneRemoveOne(ActionEvent actionEvent) {
         Object obj = tableToExport.getSelectionModel().getSelectedItem();
-        if (obj instanceof Turnus) {
-            Turnus turnus = (Turnus) obj;
-            viewModel.removeOneFromExport(turnus);
+        if (obj instanceof SchedulePlan) {
+            SchedulePlan schedulePlan = (SchedulePlan) obj;
+            viewModel.removeOneFromExport(schedulePlan);
         }
     }
 

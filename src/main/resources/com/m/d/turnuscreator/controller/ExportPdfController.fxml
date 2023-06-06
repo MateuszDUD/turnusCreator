@@ -30,9 +30,9 @@
 
 
     <!--    <HBox alignment="CENTER_LEFT" spacing="20" maxHeight="Infinity">-->
-    <!--        <JFXButton maxWidth="Infinity" text="Pridat turnus" onAction="#onAddTurnus"/>-->
-    <!--        <JFXButton maxWidth="Infinity" text="Odstranit turnus" onAction="#onDeleteTurnus"/>-->
-    <!--        <JFXComboBox fx:id="comboBoxTurns" promptText="turnus"/>-->
+    <!--        <JFXButton maxWidth="Infinity" text="Pridat schedulePlan" onAction="#onAddTurnus"/>-->
+    <!--        <JFXButton maxWidth="Infinity" text="Odstranit schedulePlan" onAction="#onDeleteTurnus"/>-->
+    <!--        <JFXComboBox fx:id="comboBoxTurns" promptText="schedulePlan"/>-->
     <!--    </HBox>-->
 
     <!--    <TableView fx:id="tableSelectedTurnus" VBox.vgrow="ALWAYS"/>-->

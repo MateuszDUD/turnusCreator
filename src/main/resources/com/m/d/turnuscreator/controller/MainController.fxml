@@ -9,11 +9,11 @@
            fx:controller="com.m.d.turnuscreator.controller.MainController">
 
     <JFXTabPane side="LEFT" tabClosingPolicy="UNAVAILABLE">
-        <Tab closable="false" text="VSTUPNE DATA">
+        <Tab closable="false" text="Data">
             <fx:include fx:id="dataManagerPage" source="DataManagerController.fxml"/>
         </Tab>
-        <Tab closable="false" text="POCITAJ">
-            <fx:include fx:id="ExpPage" source="ExpController.fxml"/>
+        <Tab closable="false" text="Optimalizator">
+            <fx:include fx:id="ExpPage" source="SolverController.fxml"/>
         </Tab>
         <Tab closable="false" text="Zobrazovac turnusov">
             <fx:include fx:id="turnusPage" source="TurnusController.fxml"/>

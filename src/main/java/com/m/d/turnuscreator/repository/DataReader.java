@@ -1,10 +1,9 @@
 package com.m.d.turnuscreator.repository;
 
-import com.m.d.turnuscreator.bean.Edge;
-import com.m.d.turnuscreator.bean.Node;
-import com.m.d.turnuscreator.bean.Spoj;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVWriter;
+import com.m.d.turnuscreator.bean.Route;
+import com.m.d.turnuscreator.bean.SchedulePlan;
+import com.m.d.turnuscreator.bean.Stop;
+import com.m.d.turnuscreator.bean.Schedule;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Triple;
 
@@ -12,7 +11,6 @@ import java.io.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,8 +23,8 @@ public class DataReader {
 
     private static DateTimeFormatter isoTimeFormatter = DateTimeFormatter.ISO_TIME;
 
-    public static List<Spoj> readSpoje(String path) throws IOException {
-        List<Spoj> spoje = new ArrayList<>();
+    public static List<Schedule> readShedules(String path) throws IOException {
+        List<Schedule> spoje = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -36,8 +34,16 @@ public class DataReader {
                 String departure = values[4].length() == 8 ? values[4] : "0" + values[4];
                 String arrival = values[7].length() == 8 ? values[7] : "0" + values[7];
 
+                long durationMSec = 0L;
+                long durationRSec = 0L;
+
+                if (values.length == 11) {
+                    durationMSec = Long.parseLong(values[9]);
+                    durationRSec = Long.parseLong(values[10]);
+                }
+
                 spoje.add(
-                        Spoj.builder()
+                        Schedule.builder()
                                 .id(id++)
                                 .line(values[0])
                                 .spoj(values[1])
@@ -48,6 +54,7 @@ public class DataReader {
                                 .toName(values[6])
                                 .arrival(LocalTime.parse(arrival))
                                 .distanceInKm(Integer.parseInt(values[8]))
+                                .triangularTimeDurationSec(Triple.of(0L, durationMSec, durationRSec))
                                 .build()
                 );
             }
@@ -59,8 +66,8 @@ public class DataReader {
         return spoje;
     }
 
-    public static List<Edge> readEdges(String path) throws IOException {
-        List<Edge> edges = new ArrayList<>();
+    public static List<Route> readEdges(String path) throws IOException {
+        List<Route> routes = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -68,7 +75,7 @@ public class DataReader {
                 String[] values = line.split(";");
 
 
-                Edge.EdgeBuilder builder = Edge.builder()
+                Route.RouteBuilder builder = Route.builder()
                         .fromId(Integer.parseInt(values[0]))
                         .fromName(values[1])
                         .toId(Integer.parseInt(values[2]))
@@ -87,25 +94,25 @@ public class DataReader {
                             Integer.parseInt(values[4])));
                 }
 
-                edges.add(builder.build());
+                routes.add(builder.build());
             }
         } catch (IOException e) {
             log.error("Error ", e);
             throw e;
         }
 
-        return edges;
+        return routes;
     }
 
-    public static List<Node> readNodes(String path) throws IOException {
-        List<Node> nodes = new ArrayList<>();
+    public static List<Stop> readNodes(String path) throws IOException {
+        List<Stop> stops = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(";");
-                nodes.add(
-                        Node.builder()
+                stops.add(
+                        Stop.builder()
                                 .id(Integer.parseInt(values[0]))
                                 .name(values[1])
                                 .build()
@@ -116,15 +123,66 @@ public class DataReader {
             throw e;
         }
 
-        return nodes;
+        return stops;
     }
 
-    public static void saveNodes(String path, List<Node> nodes) {
+    public static ArrayList<SchedulePlan> readSchedulesPlan(String path, List<Stop> stops, List<Schedule> schedules) throws IOException {
+        ArrayList<SchedulePlan> schedulePlans = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(";");
+                log.info("" + line);
+                SchedulePlan.SchedulePlanBuilder builder = SchedulePlan.builder();
+
+                builder.id(Integer.parseInt(values[0]));
+
+                int depoId = Integer.parseInt(values[1]);
+
+                builder.depot(stops.stream().filter(stop -> stop.getId() == depoId).findFirst().get());
+
+                ArrayList<Schedule> newScheduleList = new ArrayList<>();
+
+                for (int i = 2; i < values.length; i++) {
+                    int scheduleId = Integer.parseInt(values[i]);
+
+                    Schedule schedule = schedules.stream().filter(s -> s.getId() == scheduleId).findFirst().get();
+                    newScheduleList.add(schedule);
+                }
+                builder.scheduleList(newScheduleList);
+
+                schedulePlans.add(builder.build());
+            }
+        } catch (IOException e) {
+            log.error("Error ", e);
+            throw e;
+        }
+
+        return schedulePlans;
+    }
+
+    public static void saveShedulePlans(String path, List<SchedulePlan> schedulePlanList) {
+        File csvOutputFile = new File(path);
+        try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
+            schedulePlanList.stream().map(s -> {
+                String scheduleIds = s.getScheduleList().stream().map(a -> a.getId()+ "").collect(Collectors.joining(";"));
+                return prepareCSVRow(s.getId() + "",
+                        s.getDepot().getId() + "",
+                        scheduleIds);
+            }).forEach(pw::println);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveNodes(String path, List<Stop> stops) {
 //        nodes.sort((o1, o2) -> Integer.compare(o1.getId(), o2.getId()));
 
         File csvOutputFile = new File(path);
         try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
-            nodes.stream()
+            stops.stream()
                     .map(node -> prepareCSVRow(node.getId() + "", node.getName()))
                     .forEach(pw::println);
         } catch (FileNotFoundException e) {
@@ -132,12 +190,12 @@ public class DataReader {
         }
     }
 
-    public static void saveEdges(String path, ArrayList<Edge> edgeList) {
+    public static void saveEdges(String path, ArrayList<Route> routeList) {
 //        edgeList.sort((o1, o2) -> Integer.compare(o1.getFromId(), o2.getFromId()));
 
         File csvOutputFile = new File(path);
         try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
-            edgeList.stream()
+            routeList.stream()
                     .map(edge -> prepareCSVRow(
                             String.valueOf(edge.getFromId()),
                             edge.getFromName(),
@@ -154,12 +212,12 @@ public class DataReader {
         }
     }
 
-    public static void saveConections(String path, ArrayList<Spoj> spojList) {
+    public static void saveConections(String path, ArrayList<Schedule> scheduleList) {
 //        spojList.sort((o1, o2) -> Integer.compare(Integer.parseInt(o1.getLine()), Integer.parseInt(o2.getLine())));
 
         File csvOutputFile = new File(path);
         try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
-            spojList.stream()
+            scheduleList.stream()
                     .map(spoj -> prepareCSVRow(
                             spoj.getLine(),
                             spoj.getSpoj(),
@@ -169,7 +227,9 @@ public class DataReader {
                             String.valueOf(spoj.getToId()),
                             spoj.getToName(),
                             spoj.getArrival().format(isoTimeFormatter),
-                            String.valueOf(spoj.getDistanceInKm())
+                            String.valueOf(spoj.getDistanceInKm()),
+                            String.valueOf(spoj.getTriangularTimeDurationSec().getMiddle()),
+                            String.valueOf(spoj.getTriangularTimeDurationSec().getRight())
                     ))
                     .forEach(pw::println);
         } catch (FileNotFoundException e) {

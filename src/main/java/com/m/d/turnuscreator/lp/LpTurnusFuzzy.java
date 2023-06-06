@@ -1,7 +1,7 @@
 package com.m.d.turnuscreator.lp;
 
-import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.bean.SpojWithPossibleConnections;
+import com.m.d.turnuscreator.bean.Schedule;
+import com.m.d.turnuscreator.bean.ScheduleWithPossibleConnections;
 import com.m.d.turnuscreator.enums.FuzzyModelMode;
 import gurobi.*;
 import lombok.Getter;
@@ -15,8 +15,8 @@ import java.util.*;
 public class LpTurnusFuzzy {
 
     private Map<Integer,Map<Integer, Triple<Long, Long, Long>>> distances;
-    private List<Spoj> spojeSimple;
-    private List<SpojWithPossibleConnections> spoje2;
+    private List<Schedule> spojeSimple;
+    private List<ScheduleWithPossibleConnections> spoje2;
 
     private GRBModel model;
 
@@ -30,7 +30,7 @@ public class LpTurnusFuzzy {
     private double obj_val= -1;
     private int reserve;
 
-    public LpTurnusFuzzy createModel(List<SpojWithPossibleConnections> possibleConnections, Map<Integer, Map<Integer, Triple<Long, Long, Long>>> dist, FuzzyModelMode fuzzyModelMode, int m) {
+    public LpTurnusFuzzy createModel(List<ScheduleWithPossibleConnections> possibleConnections, Map<Integer, Map<Integer, Triple<Long, Long, Long>>> dist, FuzzyModelMode fuzzyModelMode, int m) {
         spoje2 = possibleConnections;
         modelVariables = new HashMap<>();
         distances = dist;
@@ -68,21 +68,21 @@ public class LpTurnusFuzzy {
         List<GRBLinExpr> consList = new ArrayList<>();
         List<Integer> startTime = new ArrayList<>();
 
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
 
             if (!iSpoj.getPossibleConnectionsToThis().isEmpty()) {
                 GRBLinExpr cons = new GRBLinExpr();
 
 
-                for (SpojWithPossibleConnections jSpoj : iSpoj.getPossibleConnectionsToThis()) {
+                for (ScheduleWithPossibleConnections jSpoj : iSpoj.getPossibleConnectionsToThis()) {
                     int coef = 0;
                     coef += jSpoj.getDeparture().toSecondOfDay();
 
                     if (fuzzyModelMode == FuzzyModelMode.PESSIMISTIC) {
-                        coef += jSpoj.getTriangularTimeDurationSec().getRight();
+                        coef += jSpoj.getRightDuration();
                         coef += distances.get(jSpoj.getToId()).get(iSpoj.getFromId()).getRight();
                     } else {
-                        coef += jSpoj.getTriangularTimeDurationSec().getLeft();
+                        coef += jSpoj.getLeftDuration();
                         coef += distances.get(jSpoj.getToId()).get(iSpoj.getFromId()).getLeft();
                     }
 
@@ -103,7 +103,7 @@ public class LpTurnusFuzzy {
 
     private void createConji() throws GRBException {
         List<GRBLinExpr> consList = new ArrayList<>();
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
 
             if (!iSpoj.getPossibleConnectionsToThis().isEmpty()) {
                 GRBLinExpr cons = new GRBLinExpr();
@@ -121,7 +121,7 @@ public class LpTurnusFuzzy {
 
     private void createConij() throws GRBException {
         List<GRBLinExpr> consList = new ArrayList<>();
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
 
             if (!iSpoj.getPossibleConnectionsFromThis().isEmpty()) {
                 GRBLinExpr cons = new GRBLinExpr();

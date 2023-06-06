@@ -1,7 +1,7 @@
 package com.m.d.turnuscreator.lp;
 
-import com.m.d.turnuscreator.bean.Spoj;
-import com.m.d.turnuscreator.bean.SpojWithPossibleConnections;
+import com.m.d.turnuscreator.bean.Schedule;
+import com.m.d.turnuscreator.bean.ScheduleWithPossibleConnections;
 import gurobi.*;
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -12,15 +12,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class LpTurnusFuzzyHVMinEmptyTravels {
 
-    private Map<Integer,Map<Integer, Triple<Long, Long, Long>>> distancesInSeconds;
+    private Map<Integer, Map<Integer, Triple<Long, Long, Long>>> distancesInSeconds;
     private Map<Integer, Map<Integer, Integer>> distancesMeters;
-    private List<Spoj> spojeSimple;
-    private List<SpojWithPossibleConnections> spoje2;
+    private List<Schedule> spojeSimple;
+    private List<ScheduleWithPossibleConnections> spoje2;
 
     @Getter
     private GRBModel model;
 
     private Map<Integer, Map<Integer, GRBVar>> modelVariables;
+    private Map<Integer, GRBVar> modelVariablesU;
+    private Map<Integer, GRBVar> modelVariablesV;
+
+    private int depoId = 470;
 
     private int c_forName = 1;
 
@@ -28,19 +32,25 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
     private double h = 0;
 
     @Getter
-    private int obj_val= -1;
+    private int obj_val = -1;
 
     @Getter
     private boolean feasible = false;
 
     private int reserve;
 
-    public LpTurnusFuzzyHVMinEmptyTravels createModel(List<SpojWithPossibleConnections> possibleConnections, Map<Integer,Map<Integer, Triple<Long, Long, Long>>> dist, Map<Integer, Map<Integer, Integer>> distMeters, int objVal, int reserve) {
+    public LpTurnusFuzzyHVMinEmptyTravels createModel(List<ScheduleWithPossibleConnections> possibleConnections,
+                                                      Map<Integer, Map<Integer, Triple<Long, Long, Long>>> dist,
+                                                      Map<Integer, Map<Integer, Integer>> distMeters, int objVal,
+                                                      int reserve, int depoId) {
         spoje2 = possibleConnections;
         modelVariables = new HashMap<>();
+        modelVariablesU = new HashMap<>();
+        modelVariablesV = new HashMap<>();
         distancesInSeconds = dist;
         this.reserve = reserve;
         this.distancesMeters = distMeters;
+        this.depoId = depoId;
 
         this.objVal = objVal;
 
@@ -62,7 +72,6 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
         createObjFunction();
         createConstr();
         model.optimize();
-        int deb = 0;
 
         feasible = model.get(GRB.IntAttr.Status) == 2;
 
@@ -96,16 +105,16 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
         List<GRBLinExpr> consList = new ArrayList<>();
         List<Integer> startTime = new ArrayList<>();
 
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
 
             if (!iSpoj.getPossibleConnectionsToThis().isEmpty()) {
                 GRBLinExpr cons = new GRBLinExpr();
 
 
-                for (SpojWithPossibleConnections jSpoj : iSpoj.getPossibleConnectionsToThis()) {
+                for (ScheduleWithPossibleConnections jSpoj : iSpoj.getPossibleConnectionsToThis()) {
                     int coef = 0;
                     coef += jSpoj.getDeparture().toSecondOfDay();
-                    coef += jSpoj.getTriangularTimeDurationSec().getLeft();
+                    coef += jSpoj.getLeftDuration();
                     coef += distancesInSeconds.get(jSpoj.getToId()).get(iSpoj.getFromId()).getLeft();
                     coef += reserve;
 
@@ -113,7 +122,7 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
 
                     coef = 0;
                     coef += jSpoj.getDeparture().toSecondOfDay();
-                    coef += jSpoj.getTriangularTimeDurationSec().getRight();
+                    coef += jSpoj.getRightDuration();
                     coef += distancesInSeconds.get(jSpoj.getToId()).get(iSpoj.getFromId()).getRight();
                     coef += reserve;
 
@@ -134,36 +143,36 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
 
     private void createConji() throws GRBException {
         List<GRBLinExpr> consList = new ArrayList<>();
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
+            GRBLinExpr cons = new GRBLinExpr();
 
-            if (!iSpoj.getPossibleConnectionsToThis().isEmpty()) {
-                GRBLinExpr cons = new GRBLinExpr();
-                iSpoj.getPossibleConnectionsToThis().forEach(jSpoj
-                        -> cons.addTerm(1, modelVariables.get(jSpoj.getId()).get(iSpoj.getId())));
-                consList.add(cons);
-            }
+            iSpoj.getPossibleConnectionsToThis().forEach(jSpoj
+                    -> cons.addTerm(1, modelVariables.get(jSpoj.getId()).get(iSpoj.getId())));
+
+            cons.addTerm(1, modelVariablesU.get(iSpoj.getId()));
+            consList.add(cons);
         }
 
-        for (GRBLinExpr c: consList) {
-            model.addConstr(c, GRB.LESS_EQUAL, 1, "c" + c_forName++);
+        for (GRBLinExpr c : consList) {
+            model.addConstr(c, GRB.EQUAL, 1, "c" + c_forName++);
         }
 
     }
 
     private void createConij() throws GRBException {
         List<GRBLinExpr> consList = new ArrayList<>();
-        for (SpojWithPossibleConnections iSpoj : spoje2) {
+        for (ScheduleWithPossibleConnections iSpoj : spoje2) {
+            GRBLinExpr cons = new GRBLinExpr();
 
-            if (!iSpoj.getPossibleConnectionsFromThis().isEmpty()) {
-                GRBLinExpr cons = new GRBLinExpr();
-                iSpoj.getPossibleConnectionsFromThis().forEach(jSpoj
-                        -> cons.addTerm(1, modelVariables.get(iSpoj.getId()).get(jSpoj.getId())));
-                consList.add(cons);
-            }
+            iSpoj.getPossibleConnectionsFromThis().forEach(jSpoj
+                    -> cons.addTerm(1, modelVariables.get(iSpoj.getId()).get(jSpoj.getId())));
+
+            cons.addTerm(1, modelVariablesV.get(iSpoj.getId()));
+            consList.add(cons);
         }
 
-        for (GRBLinExpr c: consList) {
-            model.addConstr(c, GRB.LESS_EQUAL, 1, "c" + c_forName++);
+        for (GRBLinExpr c : consList) {
+            model.addConstr(c, GRB.EQUAL, 1, "c" + c_forName++);
         }
 
     }
@@ -175,14 +184,25 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
         double[] coef = new double[list.length];
 
         AtomicInteger i = new AtomicInteger();
-        spoje2.forEach(s -> {
-            s.getPossibleConnectionsFromThis().forEach(n -> {
-                coef[i.get()] = distancesMeters.get(s.getToId()).get(n.getFromId());
-                i.getAndIncrement();
-            });
-        });
+        for (var entryA : modelVariables.entrySet()) {
+            for (var entryB : entryA.getValue().entrySet()) {
+                Schedule a = spoje2.stream().filter(s -> s.getId() == entryA.getKey()).findFirst().get();
+                Schedule b = spoje2.stream().filter(s -> s.getId() == entryB.getKey()).findFirst().get();
+                coef[i.getAndIncrement()] = distancesMeters.get(a.getToId()).get(b.getFromId());
+                linExpr.addTerm(distancesMeters.get(a.getToId()).get(b.getFromId()), entryB.getValue());
+            }
+        }
 
-        linExpr.addTerms(coef, GurobiHelperFunctions.mapToArray(modelVariables));
+        for (var entryU : modelVariablesU.entrySet()) {
+            Schedule a = spoje2.stream().filter(s -> s.getId() == entryU.getKey()).findFirst().get();
+            linExpr.addTerm(distancesMeters.get(depoId).get(a.getFromId()), entryU.getValue());
+        }
+
+        for (var entryV : modelVariablesV.entrySet()) {
+            Schedule a = spoje2.stream().filter(s -> s.getId() == entryV.getKey()).findFirst().get();
+            linExpr.addTerm(distancesMeters.get(a.getToId()).get(depoId), entryV.getValue());
+        }
+
 
         model.setObjective(linExpr, GRB.MINIMIZE);
     }
@@ -197,7 +217,18 @@ public class LpTurnusFuzzyHVMinEmptyTravels {
                     e.printStackTrace();
                 }
             });
+
+            try {
+                GRBVar grbVar = model.addVar(0, 1, 0, GRB.BINARY, "u" + s.getId());
+                modelVariablesU.put(s.getId(), grbVar);
+
+                grbVar = model.addVar(0, 1, 0, GRB.BINARY, "v" + s.getId());
+                modelVariablesV.put(s.getId(), grbVar);
+            } catch (GRBException e) {
+                e.printStackTrace();
+            }
         });
+
     }
 
 }
